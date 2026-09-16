@@ -1,0 +1,23 @@
+{
+    "selection_method": "Constraint-based threshold selection",
+    "constraints": {
+        "sensitivity": ">0.9",
+        "specificity": ">0.6"
+    },
+    "selection_criterion": "Highest sensitivity among thresholds satisfying both constraints",
+    "tie_breaker": "Highest specificity",
+    "final_tie_breaker": "Highest threshold",
+    "selected_threshold": 0.586,
+    "sensitivity": 0.9444444444444444,
+    "specificity": 0.616,
+    "accuracy": 0.7360406091370558,
+    "precision": 0.5862068965517241,
+    "f1": 0.7234042553191489,
+    "tn": 77,
+    "fp": 48,
+    "fn": 4,
+    "tp": 68,
+    "number_of_oof_predictions": 197,
+    "overall_oof_roc_auc": 0.8801111111111112,
+    "test_set_used": false
+}

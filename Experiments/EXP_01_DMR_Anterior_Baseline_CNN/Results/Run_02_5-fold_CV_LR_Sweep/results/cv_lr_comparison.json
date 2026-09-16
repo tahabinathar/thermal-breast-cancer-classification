@@ -1,0 +1,32 @@
+[
+    {
+        "learning_rate": 0.001,
+        "mean_auc": 0.8976380952380951,
+        "std_auc": 0.050079751363187056,
+        "mean_accuracy": 0.7557692307692309,
+        "mean_sensitivity": 0.9152380952380954,
+        "mean_specificity": 0.664,
+        "mean_precision": 0.6144296675191816,
+        "mean_f1_score": 0.7319595346760032
+    },
+    {
+        "learning_rate": 0.0005,
+        "mean_auc": 0.8915428571428571,
+        "std_auc": 0.047523958392743246,
+        "mean_accuracy": 0.7710256410256411,
+        "mean_sensitivity": 0.9438095238095239,
+        "mean_specificity": 0.672,
+        "mean_precision": 0.6263722943722944,
+        "mean_f1_score": 0.7514328808446457
+    },
+    {
+        "learning_rate": 0.0001,
+        "mean_auc": 0.874552380952381,
+        "std_auc": 0.04309775420173958,
+        "mean_accuracy": 0.7916666666666666,
+        "mean_sensitivity": 0.8609523809523811,
+        "mean_specificity": 0.752,
+        "mean_precision": 0.6651909184726522,
+        "mean_f1_score": 0.7497096199183486
+    }
+]

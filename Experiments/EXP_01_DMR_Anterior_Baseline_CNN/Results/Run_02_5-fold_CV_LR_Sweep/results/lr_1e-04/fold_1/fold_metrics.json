@@ -1,0 +1,18 @@
+{
+    "fold": 1,
+    "learning_rate": 0.0001,
+    "best_epoch": 100,
+    "best_val_auc": 0.9119999408721924,
+    "accuracy": 0.775,
+    "sensitivity": 0.8,
+    "specificity": 0.76,
+    "precision": 0.6666666666666666,
+    "f1": 0.7272727272727273,
+    "roc_auc": 0.912,
+    "tn": 19,
+    "fp": 6,
+    "fn": 3,
+    "tp": 12,
+    "temperature_min": 22.0,
+    "temperature_max": 36.812618255615234
+}
