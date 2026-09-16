@@ -1,0 +1,30 @@
+{
+    "run_name": "Run_04_Fixed_Epoch_Selection",
+    "source_run": "Run_03_5-fold_CV_Dropout_Sweep",
+    "source_csv": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Experiments\\EXP_01_DMR_Anterior_Baseline_CNN\\Results\\Run_03_5-fold_CV_Dropout_Sweep\\results\\dropout_0.3\\epoch_wise_val_auc.csv",
+    "aggregate_mean_auc_best_epoch": 89,
+    "aggregate_mean_auc_best_value": 0.891409481,
+    "fold_best_epochs": {
+        "1": 70,
+        "2": 100,
+        "3": 95,
+        "4": 89,
+        "5": 12
+    },
+    "fold_best_auc": {
+        "1": 0.917333364,
+        "2": 0.930666625,
+        "3": 0.938571393,
+        "4": 0.909999967,
+        "5": 0.797142863
+    },
+    "full_training_epoch": 100,
+    "candidate_epochs": [
+        12,
+        70,
+        89,
+        95,
+        100
+    ],
+    "selection_basis": "Candidates were derived from Run 03 training dynamics using the individual fold optima, the aggregate mean-AUC optimum, and the full 100-epoch training duration. No arbitrary intermediate epochs were introduced."
+}

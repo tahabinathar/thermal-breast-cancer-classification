@@ -1,0 +1,41 @@
+{
+    "experiment_name": "EXP01_DMR_Anterior_Baseline",
+    "run_name": "Run_04_Fixed_Epoch_Selection",
+    "run_description": "Fixed-epoch selection using 5-fold stratified cross-validation with learning rate fixed at 1e-3 and dropout fixed at 0.3. Candidate epochs are derived automatically from the Run 03 epoch-wise validation AUC results and evaluated independently across all five folds. The final fixed epoch is selected using the highest mean 5-fold validation ROC-AUC.",
+    "image_size": 128,
+    "batch_size": 16,
+    "maximum_epochs": 100,
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "n_folds": 5,
+    "threshold": 0.5,
+    "seed": 10,
+    "development_dataset": {
+        "total": 197,
+        "healthy": 125,
+        "sick": 72
+    },
+    "test_set_used": false,
+    "candidate_epochs": [
+        12,
+        70,
+        89,
+        95,
+        100
+    ],
+    "selected_fixed_epoch": 89,
+    "selected_mean_roc_auc": 0.8880380952380953,
+    "selected_std_roc_auc": 0.05997289183541214,
+    "selection_criterion": "Highest mean 5-fold validation ROC-AUC",
+    "tie_breaker": "Lower epoch",
+    "run03_source_csv": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Experiments\\EXP_01_DMR_Anterior_Baseline_CNN\\Results\\Run_03_5-fold_CV_Dropout_Sweep\\results\\dropout_0.3\\epoch_wise_val_auc.csv",
+    "run03_mean_auc_best_epoch": 89,
+    "run03_mean_auc_best_value": 0.891409481,
+    "run03_fold_best_epochs": {
+        "1": 70,
+        "2": 100,
+        "3": 95,
+        "4": 89,
+        "5": 12
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "experiment_name": "EXP01_DMR_Anterior_Baseline",
+    "run_name": "Run_05_5-fold_CV_OOF_Predictions",
+    "run_description": "Generate out-of-fold (OOF) predictions for the final EXP01 CNN configuration using stratified 5-fold cross-validation on the pooled development dataset. The learning rate selected in Run 02, dropout rate selected in Run 03, and fixed training epoch selected in Run 04 are held constant. Each fold is trained for exactly 89 epochs without validation-based checkpoint selection. The test set is not used, and no classification threshold is applied in this run.",
+    "seed": 10,
+    "image_size": 128,
+    "batch_size": 16,
+    "fixed_epoch": 89,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "n_folds": 5,
+    "development_images": 197,
+    "healthy_images": 125,
+    "sick_images": 72,
+    "overall_oof_roc_auc": 0.8801111111111112,
+    "test_set_used": false,
+    "threshold_applied": false,
+    "folds": [
+        {
+            "fold": 1,
+            "n_train": 157,
+            "n_validation": 40,
+            "train_healthy": 100,
+            "train_sick": 57,
+            "validation_healthy": 25,
+            "validation_sick": 15,
+            "temperature_min": 22.0,
+            "temperature_max": 36.812618255615234,
+            "class_weights": {
+                "0": 0.785,
+                "1": 1.3771929824561404
+            },
+            "fixed_epoch": 89,
+            "oof_roc_auc": 0.9146666666666667
+        },
+        {
+            "fold": 2,
+            "n_train": 157,
+            "n_validation": 40,
+            "train_healthy": 100,
+            "train_sick": 57,
+            "validation_healthy": 25,
+            "validation_sick": 15,
+            "temperature_min": 22.0,
+            "temperature_max": 36.779998779296875,
+            "class_weights": {
+                "0": 0.785,
+                "1": 1.3771929824561404
+            },
+            "fixed_epoch": 89,
+            "oof_roc_auc": 0.9253333333333333
+        },
+        {
+            "fold": 3,
+            "n_train": 158,
+            "n_validation": 39,
+            "train_healthy": 100,
+            "train_sick": 58,
+            "validation_healthy": 25,
+            "validation_sick": 14,
+            "temperature_min": 22.22035026550293,
+            "temperature_max": 36.812618255615234,
+            "class_weights": {
+                "0": 0.79,
+                "1": 1.3620689655172413
+            },
+            "fixed_epoch": 89,
+            "oof_roc_auc": 0.9314285714285715
+        },
+        {
+            "fold": 4,
+            "n_train": 158,
+            "n_validation": 39,
+            "train_healthy": 100,
+            "train_sick": 58,
+            "validation_healthy": 25,
+            "validation_sick": 14,
+            "temperature_min": 22.0,
+            "temperature_max": 36.812618255615234,
+            "class_weights": {
+                "0": 0.79,
+                "1": 1.3620689655172413
+            },
+            "fixed_epoch": 89,
+            "oof_roc_auc": 0.9057142857142857
+        },
+        {
+            "fold": 5,
+            "n_train": 158,
+            "n_validation": 39,
+            "train_healthy": 100,
+            "train_sick": 58,
+            "validation_healthy": 25,
+            "validation_sick": 14,
+            "temperature_min": 22.0,
+            "temperature_max": 36.812618255615234,
+            "class_weights": {
+                "0": 0.79,
+                "1": 1.3620689655172413
+            },
+            "fixed_epoch": 89,
+            "oof_roc_auc": 0.7714285714285715
+        }
+    ]
+}

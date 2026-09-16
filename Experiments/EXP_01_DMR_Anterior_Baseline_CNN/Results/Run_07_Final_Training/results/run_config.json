@@ -1,0 +1,49 @@
+{
+    "experiment": "EXP01_DMR_Anterior_Baseline",
+    "run": "Run_07_Final_Training",
+    "device": "cpu",
+    "seed": 10,
+    "data_root": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Dataset\\DMR_IR_Anterior_View_ROI",
+    "development_splits": [
+        "Train",
+        "Validation"
+    ],
+    "train_images": 163,
+    "validation_images": 34,
+    "development_images": 197,
+    "test_used": false,
+    "image_size": 128,
+    "input_shape": [
+        128,
+        128,
+        1
+    ],
+    "batch_size": 16,
+    "epochs": 89,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "augmentation": {
+        "random_rotation": 0.05,
+        "random_zoom": 0.05,
+        "horizontal_flip": false
+    },
+    "class_weighting": true,
+    "class_weights": {
+        "0": 0.788,
+        "1": 1.3680555555555556
+    },
+    "early_stopping": false,
+    "checkpointing": false,
+    "deterministic": true,
+    "model_selection": false,
+    "fixed_epoch": 89,
+    "temperature_normalization": {
+        "method": "global_min_max",
+        "range_source": "development_data",
+        "global_min": 22.0,
+        "global_max": 36.812618255615234
+    },
+    "threshold": null,
+    "test_evaluation": false
+}

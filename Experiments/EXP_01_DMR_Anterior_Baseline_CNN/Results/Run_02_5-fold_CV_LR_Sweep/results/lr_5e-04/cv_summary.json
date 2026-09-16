@@ -1,0 +1,10 @@
+{
+    "learning_rate": 0.0005,
+    "mean_auc": 0.8915428571428571,
+    "std_auc": 0.047523958392743246,
+    "mean_accuracy": 0.7710256410256411,
+    "mean_sensitivity": 0.9438095238095239,
+    "mean_specificity": 0.672,
+    "mean_precision": 0.6263722943722944,
+    "mean_f1_score": 0.7514328808446457
+}

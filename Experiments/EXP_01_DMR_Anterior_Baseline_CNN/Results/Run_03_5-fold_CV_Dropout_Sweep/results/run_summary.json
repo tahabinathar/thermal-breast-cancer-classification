@@ -1,0 +1,19 @@
+{
+    "experiment": "EXP01_DMR_Anterior_Baseline",
+    "run": "Run_03_5-fold_CV_Dropout_Sweep",
+    "seed": 10,
+    "image_size": 128,
+    "batch_size": 16,
+    "epochs": 100,
+    "learning_rate": 0.001,
+    "number_of_folds": 5,
+    "dropout_rates_tested": [
+        0.3,
+        0.5,
+        0.7
+    ],
+    "best_dropout_rate": 0.3,
+    "selection_metric": "Mean 5-fold validation ROC-AUC",
+    "threshold": 0.5,
+    "test_set_used": false
+}
