@@ -1,0 +1,67 @@
+{
+    "experiment": "EXP02_DMR_Anterior_ResNet18",
+    "run": "Run_06_Final_Training",
+    "seed": 10,
+    "device": "cuda",
+    "data_root": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Dataset\\DMR_IR_Anterior_View_ROI",
+    "development_splits": [
+        "Train",
+        "Validation"
+    ],
+    "train_images": 163,
+    "validation_images": 34,
+    "development_images": 197,
+    "healthy_images": 125,
+    "sick_images": 72,
+    "test_used": false,
+    "image_size": 224,
+    "input_channels": 3,
+    "batch_size": 16,
+    "epochs": 32,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "architecture": "ResNet18",
+    "pretrained_weights": "ImageNet1K_V1",
+    "backbone_frozen": true,
+    "classifier": [
+        "Linear(512,64)",
+        "ReLU",
+        "Dropout(0.3)",
+        "Linear(64,1)"
+    ],
+    "trainable_parameters": 32897,
+    "augmentation": {
+        "resize": [
+            224,
+            224
+        ],
+        "random_rotation_degrees": 18,
+        "random_affine_scale": [
+            0.95,
+            1.05
+        ],
+        "horizontal_flip": false
+    },
+    "class_weighting": true,
+    "class_weights": {
+        "0": 0.788,
+        "1": 1.3680555555555556
+    },
+    "loss": "BCEWithLogitsLoss",
+    "pos_weight": 1.7361111111111112,
+    "early_stopping": false,
+    "checkpointing": false,
+    "deterministic": true,
+    "model_selection": false,
+    "fixed_epoch": 32,
+    "temperature_normalization": {
+        "method": "global_min_max",
+        "range_source": "development_data",
+        "global_min": 22.0,
+        "global_max": 36.812618255615234
+    },
+    "threshold": 0.192174,
+    "threshold_source": "Run 05 OOF threshold selection",
+    "test_evaluation": false
+}

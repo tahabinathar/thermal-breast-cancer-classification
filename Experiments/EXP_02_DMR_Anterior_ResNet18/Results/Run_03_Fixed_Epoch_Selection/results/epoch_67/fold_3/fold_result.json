@@ -1,0 +1,39 @@
+{
+    "candidate_epoch": 67,
+    "fold": 3,
+    "train_count": 158,
+    "validation_count": 39,
+    "train_healthy": 100,
+    "train_sick": 58,
+    "validation_healthy": 25,
+    "validation_sick": 14,
+    "temperature_range": {
+        "global_min": 22.22035026550293,
+        "global_max": 36.812618255615234
+    },
+    "class_weights": {
+        "Healthy": 0.79,
+        "Sick": 1.3620689655172413
+    },
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "batch_size": 16,
+    "fixed_epoch": 67,
+    "threshold": 0.5,
+    "seed": 10,
+    "metrics": {
+        "roc_auc": 0.9885714285714285,
+        "average_precision": 0.9786891679748821,
+        "accuracy": 0.9230769230769231,
+        "balanced_accuracy": 0.94,
+        "sensitivity": 1.0,
+        "specificity": 0.88,
+        "precision": 0.8235294117647058,
+        "f1": 0.9032258064516129,
+        "mcc": 0.8512965889470844,
+        "tn": 22,
+        "fp": 3,
+        "fn": 0,
+        "tp": 14
+    }
+}

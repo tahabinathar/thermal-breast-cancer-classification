@@ -1,0 +1,79 @@
+{
+    "experiment_name": "EXP02_DMR_Anterior_ResNet18",
+    "run_name": "Run_02_5-fold_CV_Training_Dynamics",
+    "seed": 10,
+    "seed_reset_each_fold": true,
+    "num_folds": 5,
+    "image_size": 224,
+    "batch_size": 16,
+    "epochs": 100,
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "threshold": 0.5,
+    "pooled_train_validation_samples": 197,
+    "healthy_samples": 125,
+    "sick_samples": 72,
+    "test_loaded": false,
+    "test_evaluated": false,
+    "test_used_during_training": false,
+    "best_mean_validation_auc_epoch": 32,
+    "best_mean_validation_auc": 0.9177523809523811,
+    "metrics": {
+        "epoch_1_validation_auc": {
+            "mean": 0.8686095238095237,
+            "std": 0.04129608152363067
+        },
+        "best_validation_auc": {
+            "mean": 0.9293333333333333,
+            "std": 0.03584274042001157
+        },
+        "best_epoch": {
+            "mean": 55.8,
+            "std": 24.57152823900052
+        },
+        "epoch_100_validation_auc": {
+            "mean": 0.9072761904761905,
+            "std": 0.05621460660242013
+        },
+        "validation_roc_auc": {
+            "mean": 0.9293333333333333,
+            "std": 0.03584274042001157
+        },
+        "validation_pr_auc": {
+            "mean": 0.894493156318676,
+            "std": 0.05961752441910926
+        },
+        "accuracy": {
+            "mean": 0.862948717948718,
+            "std": 0.041258155211620205
+        },
+        "balanced_accuracy": {
+            "mean": 0.8508571428571429,
+            "std": 0.05247817816648618
+        },
+        "sensitivity": {
+            "mean": 0.8057142857142857,
+            "std": 0.1044323821856975
+        },
+        "specificity": {
+            "mean": 0.8959999999999999,
+            "std": 0.04079215610874228
+        },
+        "precision": {
+            "mean": 0.8198340874811464,
+            "std": 0.06048547553631101
+        },
+        "npv": {
+            "mean": 0.8923789173789173,
+            "std": 0.05599232937225654
+        },
+        "f1": {
+            "mean": 0.8089067443906153,
+            "std": 0.061071435347094034
+        },
+        "mcc": {
+            "mean": 0.7066585987155648,
+            "std": 0.0951687806701232
+        }
+    }
+}

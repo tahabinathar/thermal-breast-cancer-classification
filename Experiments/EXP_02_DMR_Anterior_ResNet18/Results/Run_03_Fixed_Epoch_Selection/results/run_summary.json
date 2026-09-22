@@ -1,0 +1,44 @@
+{
+    "experiment_name": "EXP02_DMR_Anterior_ResNet18",
+    "run_name": "Run_03_Fixed_Epoch_Selection",
+    "image_size": 224,
+    "batch_size": 16,
+    "maximum_epochs": 100,
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "n_folds": 5,
+    "threshold": 0.5,
+    "seed": 10,
+    "device": "cuda",
+    "development_dataset": {
+        "total": 197,
+        "healthy": 125,
+        "sick": 72
+    },
+    "test_set_used": false,
+    "candidate_epochs": [
+        23,
+        32,
+        67,
+        68,
+        89,
+        100
+    ],
+    "selected_fixed_epoch": 32,
+    "selected_mean_roc_auc": 0.9122285714285713,
+    "selected_std_roc_auc": 0.04571530157601439,
+    "selection_criterion": "Highest mean 5-fold validation ROC-AUC",
+    "tie_breaker": "Lower epoch",
+    "source_run": "Run_02_5-fold_CV_Training_Dynamics",
+    "run02_mean_auc_best_epoch": 32,
+    "run02_mean_auc_best_value": 0.9177523809523811,
+    "run02_fold_best_epochs": {
+        "1": 68,
+        "2": 89,
+        "3": 67,
+        "4": 32,
+        "5": 23
+    },
+    "normalization_protocol": "Fold-training-only temperature normalization",
+    "retraining_performed": true
+}
