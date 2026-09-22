@@ -1,0 +1,25 @@
+{
+    "selection_method": "Constraint-based threshold selection from OOF predictions",
+    "constraints": {
+        "sensitivity": ">0.91",
+        "specificity": ">0.6"
+    },
+    "selection_criterion": "Highest sensitivity among thresholds satisfying both constraints",
+    "tie_breaker": "Highest specificity",
+    "final_tie_breaker": "Highest threshold",
+    "selected_threshold": 0.19217434525489807,
+    "sensitivity": 0.9305555555555556,
+    "specificity": 0.632,
+    "accuracy": 0.7411167512690355,
+    "balanced_accuracy": 0.7812777777777777,
+    "precision": 0.5929203539823009,
+    "f1": 0.7243243243243244,
+    "tn": 79,
+    "fp": 46,
+    "fn": 5,
+    "tp": 67,
+    "number_of_oof_predictions": 197,
+    "overall_oof_roc_auc": 0.8926666666666667,
+    "overall_oof_pr_auc": 0.8323261991486064,
+    "test_set_used": false
+}

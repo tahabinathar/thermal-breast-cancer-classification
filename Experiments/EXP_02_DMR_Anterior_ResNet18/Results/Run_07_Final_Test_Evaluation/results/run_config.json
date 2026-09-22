@@ -1,0 +1,46 @@
+{
+    "experiment": "EXP02_DMR_Anterior_ResNet18",
+    "run": "Run_07_Final_Test_Evaluation",
+    "device": "cpu",
+    "seed": 10,
+    "data_root": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Dataset\\DMR_IR_Anterior_View_ROI",
+    "test_split": "Test",
+    "test_used": true,
+    "test_images": 37,
+    "test_healthy": 24,
+    "test_sick": 13,
+    "image_size": 224,
+    "input_shape": [
+        224,
+        224,
+        3
+    ],
+    "batch_size": 16,
+    "model_source": "Run_06_Final_Training",
+    "model_path": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Experiments\\EXP_02_DMR_Anterior_ResNet18\\Results\\Run_06_Final_Training\\model\\final_model_epoch32.pth",
+    "training_epochs": 32,
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "threshold": 0.19217434525489807,
+    "threshold_source": "Run_05_OOF_Threshold_Selection",
+    "temperature_normalization": {
+        "method": "global_min_max",
+        "range_source": "Run_06_development_data",
+        "global_min": 22.0,
+        "global_max": 36.812618255615234
+    },
+    "model_architecture": {
+        "backbone": "ResNet18",
+        "weights": "IMAGENET1K_V1",
+        "backbone_frozen": true,
+        "classifier": [
+            "Linear(512,64)",
+            "ReLU",
+            "Dropout(0.3)",
+            "Linear(64,1)"
+        ]
+    },
+    "test_evaluation": true,
+    "retraining": false,
+    "model_selection": false
+}

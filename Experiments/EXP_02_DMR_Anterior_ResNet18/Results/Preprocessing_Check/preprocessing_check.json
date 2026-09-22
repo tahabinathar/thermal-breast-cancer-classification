@@ -1,0 +1,40 @@
+{
+    "total_images": 234,
+    "image_size": 224,
+    "expected_shape": [
+        224,
+        224,
+        1
+    ],
+    "expected_dtype": "float32",
+    "expected_range": [
+        0.0,
+        1.0
+    ],
+    "split_counts": {
+        "Train": {
+            "Healthy": 103,
+            "Sick": 60
+        },
+        "Validation": {
+            "Healthy": 22,
+            "Sick": 12
+        },
+        "Test": {
+            "Healthy": 24,
+            "Sick": 13
+        }
+    },
+    "temperature_range": {
+        "global_min": 22.0,
+        "global_max": 36.812618255615234
+    },
+    "checks": {
+        "load_check": true,
+        "shape_check": true,
+        "dtype_check": true,
+        "range_check": true
+    },
+    "failed_files": [],
+    "overall_status": true
+}

@@ -1,0 +1,7 @@
+{
+    "temperature_min": 22.22035026550293,
+    "temperature_max": 36.812618255615234,
+    "computed_from": "fold_training_subset_only",
+    "validation_used_for_range": false,
+    "test_used_for_range": false
+}

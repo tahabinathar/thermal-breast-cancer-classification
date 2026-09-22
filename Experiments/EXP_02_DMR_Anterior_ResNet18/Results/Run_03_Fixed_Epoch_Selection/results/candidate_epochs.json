@@ -1,0 +1,32 @@
+{
+    "experiment_name": "EXP02_DMR_Anterior_ResNet18",
+    "run_name": "Run_03_Fixed_Epoch_Selection",
+    "source_run": "Run_02_5-fold_CV_Training_Dynamics",
+    "source_directory": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Experiments\\EXP_02_DMR_Anterior_ResNet18\\Results\\Run_02_5-fold_CV_Training_Dynamics",
+    "aggregate_mean_auc_best_epoch": 32,
+    "aggregate_mean_auc_best_value": 0.9177523809523811,
+    "fold_best_epochs": {
+        "1": 68,
+        "2": 89,
+        "3": 67,
+        "4": 32,
+        "5": 23
+    },
+    "fold_best_auc": {
+        "1": 0.9413333333333334,
+        "2": 0.9253333333333333,
+        "3": 0.9885714285714287,
+        "4": 0.9114285714285714,
+        "5": 0.8799999999999999
+    },
+    "full_training_epoch": 100,
+    "candidate_epochs": [
+        23,
+        32,
+        67,
+        68,
+        89,
+        100
+    ],
+    "selection_basis": "Candidates were derived from Run02 training dynamics using the individual fold optima, the aggregate mean-AUC optimum and the full 100-epoch training duration. No arbitrary intermediate epochs were introduced."
+}

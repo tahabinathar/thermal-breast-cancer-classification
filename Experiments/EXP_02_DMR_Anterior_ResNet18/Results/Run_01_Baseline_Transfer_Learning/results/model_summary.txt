@@ -1,0 +1,3 @@
+Total parameters: 11209409
+Trainable parameters: 32897
+Frozen parameters: 11176512

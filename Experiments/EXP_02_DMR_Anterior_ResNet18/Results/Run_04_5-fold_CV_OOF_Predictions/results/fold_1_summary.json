@@ -1,0 +1,21 @@
+{
+    "fold": 1,
+    "epochs": 32,
+    "learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "trainable_parameters": 32897,
+    "n_train": 157,
+    "n_validation": 40,
+    "train_healthy": 100,
+    "train_sick": 57,
+    "validation_healthy": 25,
+    "validation_sick": 15,
+    "class_weights": {
+        "0": 0.785,
+        "1": 1.3771929824561404
+    },
+    "temperature_min": 22.0,
+    "temperature_max": 36.812618255615234,
+    "roc_auc": 0.9306666666666666,
+    "pr_auc": 0.9497680097680097
+}
