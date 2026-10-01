@@ -1,0 +1,8 @@
+Architecture: ResNet-18
+Pretrained weights: ImageNet1K_V1
+Fine-tuning strategy: Partial
+Frozen modules: conv1, bn1, layer1, layer2, layer3
+Trainable modules: layer4, fc
+Total parameters: 11209409
+Trainable parameters: 8426625
+Frozen parameters: 2782784

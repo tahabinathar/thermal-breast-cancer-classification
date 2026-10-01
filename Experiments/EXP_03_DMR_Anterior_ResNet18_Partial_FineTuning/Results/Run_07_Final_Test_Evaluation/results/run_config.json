@@ -1,0 +1,71 @@
+{
+    "experiment": "EXP03_DMR_Anterior_ResNet18_Partial_FineTuning",
+    "run": "Run_07_Final_Test_Evaluation",
+    "device": "cpu",
+    "seed": 10,
+    "data_root": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Dataset\\DMR_IR_Anterior_View_ROI",
+    "test_split": "Test",
+    "test_used": true,
+    "test_images": 37,
+    "test_healthy": 24,
+    "test_sick": 13,
+    "image_size": 224,
+    "input_shape": [
+        224,
+        224,
+        3
+    ],
+    "batch_size": 16,
+    "model_source": "Run_06_Final_Training",
+    "model_path": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Experiments\\EXP_03_DMR_Anterior_ResNet18_Partial_FineTuning\\Results\\Run_06_Final_Training\\model\\final_model_epoch10.pth",
+    "training_epochs": 10,
+    "layer4_learning_rate": 0.0001,
+    "classifier_learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "threshold": 0.03882000222802162,
+    "threshold_source": "Run_05_OOF_Threshold_Selection",
+    "temperature_normalization": {
+        "method": "global_min_max",
+        "range_source": "Run_06_development_data",
+        "global_min": 22.0,
+        "global_max": 36.812618255615234
+    },
+    "model_architecture": {
+        "backbone": "ResNet18",
+        "weights": "IMAGENET1K_V1",
+        "backbone_frozen": false,
+        "partial_fine_tuning": true,
+        "frozen_layers": [
+            "conv1",
+            "bn1",
+            "layer1",
+            "layer2",
+            "layer3"
+        ],
+        "trainable_layers": [
+            "layer4",
+            "fc"
+        ],
+        "classifier": [
+            "Linear(512,64)",
+            "ReLU",
+            "Dropout(0.3)",
+            "Linear(64,1)"
+        ]
+    },
+    "preprocessing": {
+        "thermal_normalization": "Development-set global min-max",
+        "zero_pixels": "Set to 0",
+        "pad_to_square": true,
+        "uint8_conversion": true,
+        "resize": "224x224",
+        "augmentation": "None during Test evaluation",
+        "channel_conversion": "Single thermal channel repeated to 3 channels",
+        "imagenet_normalization": true
+    },
+    "test_evaluation": true,
+    "retraining": false,
+    "model_selection": false,
+    "threshold_tuning": false,
+    "one_shot_final_evaluation": true
+}

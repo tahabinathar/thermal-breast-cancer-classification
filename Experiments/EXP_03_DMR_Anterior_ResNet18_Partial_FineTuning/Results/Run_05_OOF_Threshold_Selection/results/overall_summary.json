@@ -1,0 +1,16 @@
+{
+    "experiment": "EXP03_DMR_Anterior_ResNet18_Partial_FineTuning",
+    "run": "Run_05_OOF_Threshold_Selection",
+    "input_run": "Run_04_5-fold_CV_OOF_Predictions",
+    "number_of_oof_predictions": 197,
+    "healthy": 125,
+    "sick": 72,
+    "number_of_folds": 5,
+    "overall_oof_roc_auc": 0.9194444444444444,
+    "overall_oof_pr_auc": 0.880196829320646,
+    "minimum_sensitivity": 0.91,
+    "minimum_specificity": 0.7,
+    "valid_thresholds": 5,
+    "selected_threshold": 0.03882000222802162,
+    "test_set_used": false
+}

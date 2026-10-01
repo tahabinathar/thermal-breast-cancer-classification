@@ -1,0 +1,28 @@
+{
+    "experiment": "EXP03_DMR_Anterior_ResNet18_Partial_FineTuning",
+    "run": "Run_05_OOF_Threshold_Selection",
+    "input_run": "Run_04_5-fold_CV_OOF_Predictions",
+    "selection_method": "Constraint-based threshold selection from OOF predictions",
+    "constraints": {
+        "sensitivity": ">0.91",
+        "specificity": ">0.7"
+    },
+    "selection_criterion": "Highest sensitivity among thresholds satisfying both constraints",
+    "tie_breaker": "Highest specificity",
+    "final_tie_breaker": "Highest threshold",
+    "selected_threshold": 0.03882000222802162,
+    "sensitivity": 0.9444444444444444,
+    "specificity": 0.704,
+    "accuracy": 0.7918781725888325,
+    "balanced_accuracy": 0.8242222222222222,
+    "precision": 0.6476190476190476,
+    "f1": 0.7683615819209039,
+    "tn": 88,
+    "fp": 37,
+    "fn": 4,
+    "tp": 68,
+    "number_of_oof_predictions": 197,
+    "overall_oof_roc_auc": 0.9194444444444444,
+    "overall_oof_pr_auc": 0.880196829320646,
+    "test_set_used": false
+}

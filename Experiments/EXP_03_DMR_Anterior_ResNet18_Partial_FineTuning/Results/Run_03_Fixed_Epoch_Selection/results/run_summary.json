@@ -1,0 +1,62 @@
+{
+    "experiment_name": "EXP03_DMR_Anterior_ResNet18_Partial_FineTuning",
+    "run_name": "Run_03_Fixed_Epoch_Selection",
+    "image_size": 224,
+    "batch_size": 16,
+    "maximum_epochs": 100,
+    "backbone_learning_rate": 0.0001,
+    "classifier_learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "n_folds": 5,
+    "threshold": 0.5,
+    "seed": 10,
+    "device": "cuda",
+    "development_dataset": {
+        "total": 197,
+        "healthy": 125,
+        "sick": 72
+    },
+    "test_set_used": false,
+    "candidate_epochs": [
+        5,
+        10,
+        12,
+        26,
+        70,
+        100
+    ],
+    "selected_fixed_epoch": 10,
+    "selected_mean_roc_auc": 0.9321142857142857,
+    "selected_std_roc_auc": 0.02580304961849494,
+    "selection_criterion": "Highest mean 5-fold validation ROC-AUC",
+    "tie_breaker": "Lower epoch",
+    "source_run": "Run_02_5-fold_CV_Training_Dynamics",
+    "run02_mean_auc_best_epoch": 26,
+    "run02_mean_auc_best_value": 0.9329142857142857,
+    "run02_fold_best_epochs": {
+        "1": 10,
+        "2": 12,
+        "3": 70,
+        "4": 26,
+        "5": 5
+    },
+    "normalization_protocol": "Fold-training-only temperature normalization",
+    "model_configuration": {
+        "architecture": "ResNet-18",
+        "pretrained_weights": "IMAGENET1K_V1",
+        "frozen_layers": [
+            "conv1",
+            "bn1",
+            "layer1",
+            "layer2",
+            "layer3"
+        ],
+        "trainable_layers": [
+            "layer4",
+            "fc"
+        ],
+        "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+        "fine_tuning_strategy": "Partial fine-tuning"
+    },
+    "retraining_performed": true
+}

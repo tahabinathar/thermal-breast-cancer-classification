@@ -1,0 +1,1958 @@
+[
+    {
+        "candidate_epoch": 5,
+        "mean_roc_auc": 0.9205714285714285,
+        "std_roc_auc": 0.034774505217931226,
+        "mean_accuracy": 0.847948717948718,
+        "std_accuracy": 0.06997510593319313,
+        "mean_balanced_accuracy": 0.845904761904762,
+        "std_balanced_accuracy": 0.07241891235176866,
+        "mean_sensitivity": 0.8438095238095238,
+        "std_sensitivity": 0.13910631507384572,
+        "mean_specificity": 0.8480000000000001,
+        "std_specificity": 0.10851727973000429,
+        "mean_precision": 0.7829314087895324,
+        "std_precision": 0.1241720837145956,
+        "mean_f1": 0.8023726989671263,
+        "std_f1": 0.0958308287324343,
+        "mean_mcc": 0.6944774404039524,
+        "std_mcc": 0.14581002426491457,
+        "fold_results": [
+            {
+                "candidate_epoch": 5,
+                "fold": 1,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 5,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9306666666666666,
+                    "average_precision": 0.9497680097680097,
+                    "accuracy": 0.85,
+                    "balanced_accuracy": 0.8666666666666667,
+                    "sensitivity": 0.9333333333333333,
+                    "specificity": 0.8,
+                    "precision": 0.7368421052631579,
+                    "f1": 0.8235294117647058,
+                    "mcc": 0.7109361731353578,
+                    "tn": 20,
+                    "fp": 5,
+                    "fn": 1,
+                    "tp": 14
+                }
+            },
+            {
+                "candidate_epoch": 5,
+                "fold": 2,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.779998779296875
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 5,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9093333333333333,
+                    "average_precision": 0.8288477824155573,
+                    "accuracy": 0.8,
+                    "balanced_accuracy": 0.8400000000000001,
+                    "sensitivity": 1.0,
+                    "specificity": 0.68,
+                    "precision": 0.6521739130434783,
+                    "f1": 0.7894736842105263,
+                    "mcc": 0.6659416347320275,
+                    "tn": 17,
+                    "fp": 8,
+                    "fn": 0,
+                    "tp": 15
+                }
+            },
+            {
+                "candidate_epoch": 5,
+                "fold": 3,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.22035026550293,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 5,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.98,
+                    "average_precision": 0.976190476190476,
+                    "accuracy": 0.9743589743589743,
+                    "balanced_accuracy": 0.9642857142857143,
+                    "sensitivity": 0.9285714285714286,
+                    "specificity": 1.0,
+                    "precision": 1.0,
+                    "f1": 0.9629629629629629,
+                    "mcc": 0.9449111825230682,
+                    "tn": 25,
+                    "fp": 0,
+                    "fn": 1,
+                    "tp": 13
+                }
+            },
+            {
+                "candidate_epoch": 5,
+                "fold": 4,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 5,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.8742857142857143,
+                    "average_precision": 0.7715001000400159,
+                    "accuracy": 0.7692307692307693,
+                    "balanced_accuracy": 0.7414285714285714,
+                    "sensitivity": 0.6428571428571429,
+                    "specificity": 0.84,
+                    "precision": 0.6923076923076923,
+                    "f1": 0.6666666666666666,
+                    "mcc": 0.4913538149119954,
+                    "tn": 21,
+                    "fp": 4,
+                    "fn": 5,
+                    "tp": 9
+                }
+            },
+            {
+                "candidate_epoch": 5,
+                "fold": 5,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 5,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9085714285714286,
+                    "average_precision": 0.8966586262313396,
+                    "accuracy": 0.8461538461538461,
+                    "balanced_accuracy": 0.8171428571428572,
+                    "sensitivity": 0.7142857142857143,
+                    "specificity": 0.92,
+                    "precision": 0.8333333333333334,
+                    "f1": 0.7692307692307693,
+                    "mcc": 0.6592443967173135,
+                    "tn": 23,
+                    "fp": 2,
+                    "fn": 4,
+                    "tp": 10
+                }
+            }
+        ]
+    },
+    {
+        "candidate_epoch": 10,
+        "mean_roc_auc": 0.9321142857142857,
+        "std_roc_auc": 0.02580304961849494,
+        "mean_accuracy": 0.8474358974358973,
+        "std_accuracy": 0.029054800972749338,
+        "mean_balanced_accuracy": 0.8047619047619049,
+        "std_balanced_accuracy": 0.04237934721411818,
+        "mean_sensitivity": 0.6495238095238095,
+        "std_sensitivity": 0.10785898242938763,
+        "mean_specificity": 0.96,
+        "std_specificity": 0.050596442562694056,
+        "mean_precision": 0.9236363636363636,
+        "std_precision": 0.09370253619436453,
+        "mean_f1": 0.7520186480186479,
+        "std_f1": 0.0633816389834246,
+        "mean_mcc": 0.6757903799006482,
+        "std_mcc": 0.06720787117603222,
+        "fold_results": [
+            {
+                "candidate_epoch": 10,
+                "fold": 1,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 10,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9306666666666666,
+                    "average_precision": 0.9478844169246646,
+                    "accuracy": 0.9,
+                    "balanced_accuracy": 0.8666666666666667,
+                    "sensitivity": 0.7333333333333333,
+                    "specificity": 1.0,
+                    "precision": 1.0,
+                    "f1": 0.8461538461538461,
+                    "mcc": 0.7950999358860351,
+                    "tn": 25,
+                    "fp": 0,
+                    "fn": 4,
+                    "tp": 11
+                }
+            },
+            {
+                "candidate_epoch": 10,
+                "fold": 2,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.779998779296875
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 10,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9413333333333334,
+                    "average_precision": 0.9024654158477687,
+                    "accuracy": 0.85,
+                    "balanced_accuracy": 0.8400000000000001,
+                    "sensitivity": 0.8,
+                    "specificity": 0.88,
+                    "precision": 0.8,
+                    "f1": 0.8,
+                    "mcc": 0.68,
+                    "tn": 22,
+                    "fp": 3,
+                    "fn": 3,
+                    "tp": 12
+                }
+            },
+            {
+                "candidate_epoch": 10,
+                "fold": 3,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.22035026550293,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 10,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9714285714285714,
+                    "average_precision": 0.9537640056022407,
+                    "accuracy": 0.8205128205128205,
+                    "balanced_accuracy": 0.75,
+                    "sensitivity": 0.5,
+                    "specificity": 1.0,
+                    "precision": 1.0,
+                    "f1": 0.6666666666666666,
+                    "mcc": 0.625,
+                    "tn": 25,
+                    "fp": 0,
+                    "fn": 7,
+                    "tp": 7
+                }
+            },
+            {
+                "candidate_epoch": 10,
+                "fold": 4,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 10,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.8914285714285715,
+                    "average_precision": 0.8234323345736388,
+                    "accuracy": 0.8205128205128205,
+                    "balanced_accuracy": 0.7814285714285715,
+                    "sensitivity": 0.6428571428571429,
+                    "specificity": 0.92,
+                    "precision": 0.8181818181818182,
+                    "f1": 0.72,
+                    "mcc": 0.6000077303150751,
+                    "tn": 23,
+                    "fp": 2,
+                    "fn": 5,
+                    "tp": 9
+                }
+            },
+            {
+                "candidate_epoch": 10,
+                "fold": 5,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 10,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9257142857142857,
+                    "average_precision": 0.910750083250083,
+                    "accuracy": 0.8461538461538461,
+                    "balanced_accuracy": 0.7857142857142857,
+                    "sensitivity": 0.5714285714285714,
+                    "specificity": 1.0,
+                    "precision": 1.0,
+                    "f1": 0.7272727272727273,
+                    "mcc": 0.6788442333021306,
+                    "tn": 25,
+                    "fp": 0,
+                    "fn": 6,
+                    "tp": 8
+                }
+            }
+        ]
+    },
+    {
+        "candidate_epoch": 12,
+        "mean_roc_auc": 0.9233142857142858,
+        "std_roc_auc": 0.03443093056529018,
+        "mean_accuracy": 0.8626923076923075,
+        "std_accuracy": 0.03904767059078857,
+        "mean_balanced_accuracy": 0.8472380952380952,
+        "std_balanced_accuracy": 0.0436034490720064,
+        "mean_sensitivity": 0.7904761904761906,
+        "std_sensitivity": 0.1025303450463754,
+        "mean_specificity": 0.9039999999999999,
+        "std_specificity": 0.06974238309665076,
+        "mean_precision": 0.8415598290598292,
+        "std_precision": 0.10508802477230332,
+        "mean_f1": 0.8067987120406475,
+        "std_f1": 0.05898750218225392,
+        "mean_mcc": 0.710524701612022,
+        "std_mcc": 0.08931887738786591,
+        "fold_results": [
+            {
+                "candidate_epoch": 12,
+                "fold": 1,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 12,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.92,
+                    "average_precision": 0.9359829059829059,
+                    "accuracy": 0.9,
+                    "balanced_accuracy": 0.88,
+                    "sensitivity": 0.8,
+                    "specificity": 0.96,
+                    "precision": 0.9230769230769231,
+                    "f1": 0.8571428571428571,
+                    "mcc": 0.7855533190649869,
+                    "tn": 24,
+                    "fp": 1,
+                    "fn": 3,
+                    "tp": 12
+                }
+            },
+            {
+                "candidate_epoch": 12,
+                "fold": 2,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.779998779296875
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 12,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9279999999999999,
+                    "average_precision": 0.8888690792638161,
+                    "accuracy": 0.875,
+                    "balanced_accuracy": 0.8733333333333333,
+                    "sensitivity": 0.8666666666666667,
+                    "specificity": 0.88,
+                    "precision": 0.8125,
+                    "f1": 0.8387096774193549,
+                    "mcc": 0.7378647873726218,
+                    "tn": 22,
+                    "fp": 3,
+                    "fn": 2,
+                    "tp": 13
+                }
+            },
+            {
+                "candidate_epoch": 12,
+                "fold": 3,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.22035026550293,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 12,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9771428571428571,
+                    "average_precision": 0.9673202614379084,
+                    "accuracy": 0.8974358974358975,
+                    "balanced_accuracy": 0.8571428571428572,
+                    "sensitivity": 0.7142857142857143,
+                    "specificity": 1.0,
+                    "precision": 1.0,
+                    "f1": 0.8333333333333334,
+                    "mcc": 0.7847060257179307,
+                    "tn": 25,
+                    "fp": 0,
+                    "fn": 4,
+                    "tp": 10
+                }
+            },
+            {
+                "candidate_epoch": 12,
+                "fold": 4,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 12,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.8685714285714287,
+                    "average_precision": 0.8060419179326741,
+                    "accuracy": 0.7948717948717948,
+                    "balanced_accuracy": 0.7614285714285715,
+                    "sensitivity": 0.6428571428571429,
+                    "specificity": 0.88,
+                    "precision": 0.75,
+                    "f1": 0.6923076923076923,
+                    "mcc": 0.5434311918885962,
+                    "tn": 22,
+                    "fp": 3,
+                    "fn": 5,
+                    "tp": 9
+                }
+            },
+            {
+                "candidate_epoch": 12,
+                "fold": 5,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 12,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9228571428571428,
+                    "average_precision": 0.8956006956006954,
+                    "accuracy": 0.8461538461538461,
+                    "balanced_accuracy": 0.8642857142857143,
+                    "sensitivity": 0.9285714285714286,
+                    "specificity": 0.8,
+                    "precision": 0.7222222222222222,
+                    "f1": 0.8125,
+                    "mcc": 0.7010681840159741,
+                    "tn": 20,
+                    "fp": 5,
+                    "fn": 1,
+                    "tp": 13
+                }
+            }
+        ]
+    },
+    {
+        "candidate_epoch": 26,
+        "mean_roc_auc": 0.9306285714285714,
+        "std_roc_auc": 0.013967191878813442,
+        "mean_accuracy": 0.862948717948718,
+        "std_accuracy": 0.030220535011108936,
+        "mean_balanced_accuracy": 0.8508571428571429,
+        "std_balanced_accuracy": 0.030233257955789593,
+        "mean_sensitivity": 0.8057142857142857,
+        "std_sensitivity": 0.04979777699962429,
+        "mean_specificity": 0.8960000000000001,
+        "std_specificity": 0.04079215610874228,
+        "mean_precision": 0.8209523809523809,
+        "std_precision": 0.061267785145202036,
+        "mean_f1": 0.8114310976379941,
+        "std_f1": 0.03959192076789704,
+        "mean_mcc": 0.705969945904759,
+        "std_mcc": 0.0641065209623446,
+        "fold_results": [
+            {
+                "candidate_epoch": 26,
+                "fold": 1,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 26,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.928,
+                    "average_precision": 0.9343650793650793,
+                    "accuracy": 0.9,
+                    "balanced_accuracy": 0.8933333333333333,
+                    "sensitivity": 0.8666666666666667,
+                    "specificity": 0.92,
+                    "precision": 0.8666666666666667,
+                    "f1": 0.8666666666666667,
+                    "mcc": 0.7866666666666666,
+                    "tn": 23,
+                    "fp": 2,
+                    "fn": 2,
+                    "tp": 13
+                }
+            },
+            {
+                "candidate_epoch": 26,
+                "fold": 2,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.779998779296875
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 26,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9279999999999999,
+                    "average_precision": 0.8789550264550264,
+                    "accuracy": 0.825,
+                    "balanced_accuracy": 0.8066666666666666,
+                    "sensitivity": 0.7333333333333333,
+                    "specificity": 0.88,
+                    "precision": 0.7857142857142857,
+                    "f1": 0.7586206896551724,
+                    "mcc": 0.6225317562548818,
+                    "tn": 22,
+                    "fp": 3,
+                    "fn": 4,
+                    "tp": 11
+                }
+            },
+            {
+                "candidate_epoch": 26,
+                "fold": 3,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.22035026550293,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 26,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9514285714285715,
+                    "average_precision": 0.9252763944493265,
+                    "accuracy": 0.8461538461538461,
+                    "balanced_accuracy": 0.8328571428571429,
+                    "sensitivity": 0.7857142857142857,
+                    "specificity": 0.88,
+                    "precision": 0.7857142857142857,
+                    "f1": 0.7857142857142857,
+                    "mcc": 0.6657142857142857,
+                    "tn": 22,
+                    "fp": 3,
+                    "fn": 3,
+                    "tp": 11
+                }
+            },
+            {
+                "candidate_epoch": 26,
+                "fold": 4,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 26,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9085714285714286,
+                    "average_precision": 0.8419166151309008,
+                    "accuracy": 0.8461538461538461,
+                    "balanced_accuracy": 0.8485714285714285,
+                    "sensitivity": 0.8571428571428571,
+                    "specificity": 0.84,
+                    "precision": 0.75,
+                    "f1": 0.8,
+                    "mcc": 0.6798794193419305,
+                    "tn": 21,
+                    "fp": 4,
+                    "fn": 2,
+                    "tp": 12
+                }
+            },
+            {
+                "candidate_epoch": 26,
+                "fold": 5,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 26,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.937142857142857,
+                    "average_precision": 0.915214171793119,
+                    "accuracy": 0.8974358974358975,
+                    "balanced_accuracy": 0.8728571428571428,
+                    "sensitivity": 0.7857142857142857,
+                    "specificity": 0.96,
+                    "precision": 0.9166666666666666,
+                    "f1": 0.8461538461538461,
+                    "mcc": 0.7750576015460308,
+                    "tn": 24,
+                    "fp": 1,
+                    "fn": 3,
+                    "tp": 11
+                }
+            }
+        ]
+    },
+    {
+        "candidate_epoch": 70,
+        "mean_roc_auc": 0.9156190476190476,
+        "std_roc_auc": 0.024693238124439944,
+        "mean_accuracy": 0.8021794871794873,
+        "std_accuracy": 0.028631968358764706,
+        "mean_balanced_accuracy": 0.7956190476190477,
+        "std_balanced_accuracy": 0.03315927343845137,
+        "mean_sensitivity": 0.7752380952380953,
+        "std_sensitivity": 0.11720091476506789,
+        "mean_specificity": 0.8160000000000001,
+        "std_specificity": 0.08236504112789599,
+        "mean_precision": 0.7279532163742689,
+        "std_precision": 0.08732985675893552,
+        "mean_f1": 0.7385740743073842,
+        "std_f1": 0.041736576071985165,
+        "mean_mcc": 0.5935189700151292,
+        "std_mcc": 0.05640272697734606,
+        "fold_results": [
+            {
+                "candidate_epoch": 70,
+                "fold": 1,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 70,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.904,
+                    "average_precision": 0.8826706164206164,
+                    "accuracy": 0.775,
+                    "balanced_accuracy": 0.7933333333333333,
+                    "sensitivity": 0.8666666666666667,
+                    "specificity": 0.72,
+                    "precision": 0.65,
+                    "f1": 0.7428571428571429,
+                    "mcc": 0.5680375574437545,
+                    "tn": 18,
+                    "fp": 7,
+                    "fn": 2,
+                    "tp": 13
+                }
+            },
+            {
+                "candidate_epoch": 70,
+                "fold": 2,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.779998779296875
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 70,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9226666666666666,
+                    "average_precision": 0.8849310144046987,
+                    "accuracy": 0.8,
+                    "balanced_accuracy": 0.8133333333333334,
+                    "sensitivity": 0.8666666666666667,
+                    "specificity": 0.76,
+                    "precision": 0.6842105263157895,
+                    "f1": 0.7647058823529411,
+                    "mcc": 0.6075272752247604,
+                    "tn": 19,
+                    "fp": 6,
+                    "fn": 2,
+                    "tp": 13
+                }
+            },
+            {
+                "candidate_epoch": 70,
+                "fold": 3,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.22035026550293,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 70,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.96,
+                    "average_precision": 0.9304934153148436,
+                    "accuracy": 0.8205128205128205,
+                    "balanced_accuracy": 0.7657142857142857,
+                    "sensitivity": 0.5714285714285714,
+                    "specificity": 0.96,
+                    "precision": 0.8888888888888888,
+                    "f1": 0.6956521739130435,
+                    "mcc": 0.6050580452280905,
+                    "tn": 24,
+                    "fp": 1,
+                    "fn": 6,
+                    "tp": 8
+                }
+            },
+            {
+                "candidate_epoch": 70,
+                "fold": 4,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 70,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.8885714285714286,
+                    "average_precision": 0.8651927437641722,
+                    "accuracy": 0.8461538461538461,
+                    "balanced_accuracy": 0.8485714285714285,
+                    "sensitivity": 0.8571428571428571,
+                    "specificity": 0.84,
+                    "precision": 0.75,
+                    "f1": 0.8,
+                    "mcc": 0.6798794193419305,
+                    "tn": 21,
+                    "fp": 4,
+                    "fn": 2,
+                    "tp": 12
+                }
+            },
+            {
+                "candidate_epoch": 70,
+                "fold": 5,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 70,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9028571428571428,
+                    "average_precision": 0.8582163997148469,
+                    "accuracy": 0.7692307692307693,
+                    "balanced_accuracy": 0.7571428571428571,
+                    "sensitivity": 0.7142857142857143,
+                    "specificity": 0.8,
+                    "precision": 0.6666666666666666,
+                    "f1": 0.6896551724137931,
+                    "mcc": 0.50709255283711,
+                    "tn": 20,
+                    "fp": 5,
+                    "fn": 4,
+                    "tp": 10
+                }
+            }
+        ]
+    },
+    {
+        "candidate_epoch": 100,
+        "mean_roc_auc": 0.9263238095238095,
+        "std_roc_auc": 0.01127477468589449,
+        "mean_accuracy": 0.8628205128205128,
+        "std_accuracy": 0.021202353087873382,
+        "mean_balanced_accuracy": 0.8530476190476189,
+        "std_balanced_accuracy": 0.01830356271776795,
+        "mean_sensitivity": 0.818095238095238,
+        "std_sensitivity": 0.060113271764036184,
+        "mean_specificity": 0.8879999999999999,
+        "std_specificity": 0.05306599664568638,
+        "mean_precision": 0.8172254216371864,
+        "std_precision": 0.06590608423517348,
+        "mean_f1": 0.8132855436081243,
+        "std_f1": 0.024494087408395277,
+        "mean_mcc": 0.7096723103558638,
+        "std_mcc": 0.03798684779505567,
+        "fold_results": [
+            {
+                "candidate_epoch": 100,
+                "fold": 1,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 100,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9226666666666666,
+                    "average_precision": 0.9329263908211277,
+                    "accuracy": 0.875,
+                    "balanced_accuracy": 0.8733333333333333,
+                    "sensitivity": 0.8666666666666667,
+                    "specificity": 0.88,
+                    "precision": 0.8125,
+                    "f1": 0.8387096774193549,
+                    "mcc": 0.7378647873726218,
+                    "tn": 22,
+                    "fp": 3,
+                    "fn": 2,
+                    "tp": 13
+                }
+            },
+            {
+                "candidate_epoch": 100,
+                "fold": 2,
+                "train_count": 157,
+                "validation_count": 40,
+                "train_healthy": 100,
+                "train_sick": 57,
+                "validation_healthy": 25,
+                "validation_sick": 15,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.779998779296875
+                },
+                "class_weights": {
+                    "Healthy": 0.785,
+                    "Sick": 1.3771929824561404
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 100,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9146666666666667,
+                    "average_precision": 0.8741248675072205,
+                    "accuracy": 0.875,
+                    "balanced_accuracy": 0.8733333333333333,
+                    "sensitivity": 0.8666666666666667,
+                    "specificity": 0.88,
+                    "precision": 0.8125,
+                    "f1": 0.8387096774193549,
+                    "mcc": 0.7378647873726218,
+                    "tn": 22,
+                    "fp": 3,
+                    "fn": 2,
+                    "tp": 13
+                }
+            },
+            {
+                "candidate_epoch": 100,
+                "fold": 3,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.22035026550293,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 100,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9314285714285714,
+                    "average_precision": 0.8881598560169988,
+                    "accuracy": 0.8205128205128205,
+                    "balanced_accuracy": 0.8285714285714285,
+                    "sensitivity": 0.8571428571428571,
+                    "specificity": 0.8,
+                    "precision": 0.7058823529411765,
+                    "f1": 0.7741935483870968,
+                    "mcc": 0.6357084917461994,
+                    "tn": 20,
+                    "fp": 5,
+                    "fn": 2,
+                    "tp": 12
+                }
+            },
+            {
+                "candidate_epoch": 100,
+                "fold": 4,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 100,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.917142857142857,
+                    "average_precision": 0.8932008467722752,
+                    "accuracy": 0.8717948717948718,
+                    "balanced_accuracy": 0.8528571428571429,
+                    "sensitivity": 0.7857142857142857,
+                    "specificity": 0.92,
+                    "precision": 0.8461538461538461,
+                    "f1": 0.8148148148148148,
+                    "mcc": 0.7181324987175318,
+                    "tn": 23,
+                    "fp": 2,
+                    "fn": 3,
+                    "tp": 11
+                }
+            },
+            {
+                "candidate_epoch": 100,
+                "fold": 5,
+                "train_count": 158,
+                "validation_count": 39,
+                "train_healthy": 100,
+                "train_sick": 58,
+                "validation_healthy": 25,
+                "validation_sick": 14,
+                "temperature_range": {
+                    "global_min": 22.0,
+                    "global_max": 36.812618255615234
+                },
+                "class_weights": {
+                    "Healthy": 0.79,
+                    "Sick": 1.3620689655172413
+                },
+                "learning_rates": {
+                    "layer4": 0.0001,
+                    "classifier": 0.001
+                },
+                "dropout_rate": 0.3,
+                "batch_size": 16,
+                "fixed_epoch": 100,
+                "threshold": 0.5,
+                "seed": 10,
+                "model_configuration": {
+                    "architecture": "ResNet-18",
+                    "pretrained_weights": "IMAGENET1K_V1",
+                    "frozen_layers": [
+                        "conv1",
+                        "bn1",
+                        "layer1",
+                        "layer2",
+                        "layer3"
+                    ],
+                    "trainable_layers": [
+                        "layer4",
+                        "fc"
+                    ],
+                    "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+                    "total_parameters": 11209409,
+                    "trainable_parameters": 8426625,
+                    "frozen_parameters": 2782784
+                },
+                "metrics": {
+                    "roc_auc": 0.9457142857142857,
+                    "average_precision": 0.9249399364488877,
+                    "accuracy": 0.8717948717948718,
+                    "balanced_accuracy": 0.8371428571428572,
+                    "sensitivity": 0.7142857142857143,
+                    "specificity": 0.96,
+                    "precision": 0.9090909090909091,
+                    "f1": 0.8,
+                    "mcc": 0.7187909865703438,
+                    "tn": 24,
+                    "fp": 1,
+                    "fn": 4,
+                    "tp": 10
+                }
+            }
+        ]
+    }
+]

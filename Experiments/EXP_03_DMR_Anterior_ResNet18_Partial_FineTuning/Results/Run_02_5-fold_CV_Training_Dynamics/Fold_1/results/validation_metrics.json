@@ -1,0 +1,18 @@
+{
+    "roc_auc": 0.9413333333333334,
+    "pr_auc": 0.9432856334384349,
+    "threshold": 0.5,
+    "threshold_status": "diagnostic_only",
+    "accuracy": 0.85,
+    "balanced_accuracy": 0.8533333333333333,
+    "sensitivity": 0.8666666666666667,
+    "specificity": 0.84,
+    "precision": 0.7647058823529411,
+    "npv": 0.9130434782608695,
+    "f1": 0.8125,
+    "mcc": 0.6920569929568129,
+    "tn": 21,
+    "fp": 4,
+    "fn": 2,
+    "tp": 13
+}

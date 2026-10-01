@@ -1,0 +1,42 @@
+{
+    "experiment_name": "EXP03_DMR_Anterior_ResNet18_Partial_FineTuning",
+    "run_name": "Run_01_Partial_FineTuning_Baseline",
+    "seed": 10,
+    "device": "cuda",
+    "image_size": 224,
+    "batch_size": 16,
+    "epochs": 100,
+    "classifier_learning_rate": 0.001,
+    "backbone_learning_rate": 0.0001,
+    "dropout_rate": 0.3,
+    "diagnostic_threshold": 0.5,
+    "global_temperature_min": 22.0,
+    "global_temperature_max": 36.779998779296875,
+    "temperature_range_source": "Train split only",
+    "train_samples": 163,
+    "validation_samples": 34,
+    "best_epoch": 96,
+    "best_validation_auc": 0.9431818181818181,
+    "final_validation_roc_auc": 0.9431818181818181,
+    "final_validation_pr_auc": 0.9155464905464905,
+    "backbone": "ResNet-18",
+    "pretrained_weights": "ImageNet1K_V1",
+    "fine_tuning_strategy": "Partial",
+    "frozen_modules": [
+        "conv1",
+        "bn1",
+        "layer1",
+        "layer2",
+        "layer3"
+    ],
+    "trainable_modules": [
+        "layer4",
+        "fc"
+    ],
+    "total_parameters": 11209409,
+    "trainable_parameters": 8426625,
+    "frozen_parameters": 2782784,
+    "test_loaded": false,
+    "test_evaluated": false,
+    "test_used_during_training": false
+}

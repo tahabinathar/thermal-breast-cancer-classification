@@ -1,0 +1,6 @@
+{
+    "source": "Train split only",
+    "temperature_min": 22.0,
+    "temperature_max": 36.779998779296875,
+    "train_images_used": 163
+}

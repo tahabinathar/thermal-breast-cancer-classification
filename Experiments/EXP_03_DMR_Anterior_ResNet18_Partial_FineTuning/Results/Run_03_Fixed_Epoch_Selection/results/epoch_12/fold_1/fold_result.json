@@ -1,0 +1,61 @@
+{
+    "candidate_epoch": 12,
+    "fold": 1,
+    "train_count": 157,
+    "validation_count": 40,
+    "train_healthy": 100,
+    "train_sick": 57,
+    "validation_healthy": 25,
+    "validation_sick": 15,
+    "temperature_range": {
+        "global_min": 22.0,
+        "global_max": 36.812618255615234
+    },
+    "class_weights": {
+        "Healthy": 0.785,
+        "Sick": 1.3771929824561404
+    },
+    "learning_rates": {
+        "layer4": 0.0001,
+        "classifier": 0.001
+    },
+    "dropout_rate": 0.3,
+    "batch_size": 16,
+    "fixed_epoch": 12,
+    "threshold": 0.5,
+    "seed": 10,
+    "model_configuration": {
+        "architecture": "ResNet-18",
+        "pretrained_weights": "IMAGENET1K_V1",
+        "frozen_layers": [
+            "conv1",
+            "bn1",
+            "layer1",
+            "layer2",
+            "layer3"
+        ],
+        "trainable_layers": [
+            "layer4",
+            "fc"
+        ],
+        "classifier": "Linear(512,64)-ReLU-Dropout(0.3)-Linear(64,1)",
+        "total_parameters": 11209409,
+        "trainable_parameters": 8426625,
+        "frozen_parameters": 2782784
+    },
+    "metrics": {
+        "roc_auc": 0.92,
+        "average_precision": 0.9359829059829059,
+        "accuracy": 0.9,
+        "balanced_accuracy": 0.88,
+        "sensitivity": 0.8,
+        "specificity": 0.96,
+        "precision": 0.9230769230769231,
+        "f1": 0.8571428571428571,
+        "mcc": 0.7855533190649869,
+        "tn": 24,
+        "fp": 1,
+        "fn": 3,
+        "tp": 12
+    }
+}

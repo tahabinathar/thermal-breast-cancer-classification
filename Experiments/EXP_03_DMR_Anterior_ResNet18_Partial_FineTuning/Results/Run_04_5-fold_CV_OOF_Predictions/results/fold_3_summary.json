@@ -1,0 +1,24 @@
+{
+    "fold": 3,
+    "epochs": 10,
+    "backbone_learning_rate": 0.0001,
+    "classifier_learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "trainable_layers": "layer4 + fc",
+    "frozen_layers": "conv1 + bn1 + layer1 + layer2 + layer3",
+    "trainable_parameters": 8426625,
+    "n_train": 158,
+    "n_validation": 39,
+    "train_healthy": 100,
+    "train_sick": 58,
+    "validation_healthy": 25,
+    "validation_sick": 14,
+    "class_weights": {
+        "0": 0.79,
+        "1": 1.3620689655172413
+    },
+    "temperature_min": 22.22035026550293,
+    "temperature_max": 36.812618255615234,
+    "roc_auc": 0.9571428571428572,
+    "pr_auc": 0.9536401098901097
+}

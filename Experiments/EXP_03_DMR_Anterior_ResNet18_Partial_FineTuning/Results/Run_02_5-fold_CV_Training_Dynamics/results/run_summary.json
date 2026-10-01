@@ -1,0 +1,57 @@
+{
+    "experiment": "EXP03_DMR_Anterior_ResNet18_Partial_FineTuning",
+    "run": "Run_02_5-fold_CV_Training_Dynamics",
+    "purpose": "5-fold cross-validation training dynamics for partially fine-tuned ImageNet-pretrained ResNet-18.",
+    "dataset": "DMR_IR_Anterior_View_ROI",
+    "development_dataset": "Original Train + Original Validation",
+    "development_samples": 197,
+    "healthy_samples": 125,
+    "sick_samples": 72,
+    "test_used": false,
+    "model": "ResNet-18",
+    "pretrained_weights": "ImageNet1K_V1",
+    "fine_tuning_strategy": "Partial fine-tuning",
+    "frozen_layers": [
+        "conv1",
+        "bn1",
+        "layer1",
+        "layer2",
+        "layer3"
+    ],
+    "trainable_layers": [
+        "layer4",
+        "fc"
+    ],
+    "total_parameters": 11209409,
+    "trainable_parameters": 8426625,
+    "frozen_parameters": 2782784,
+    "layer4_learning_rate": 0.0001,
+    "classifier_learning_rate": 0.001,
+    "dropout": 0.3,
+    "batch_size": 16,
+    "maximum_epochs": 100,
+    "number_of_folds": 5,
+    "seed": 10,
+    "seed_reset_each_fold": true,
+    "augmentation": {
+        "rotation_degrees": 18,
+        "scale_range": [
+            0.95,
+            1.05
+        ],
+        "horizontal_flip": false
+    },
+    "temperature_normalization": "Fold-specific training-only range",
+    "class_weighting": "Fold-specific training-label weights",
+    "model_selection": "Validation ROC-AUC",
+    "diagnostic_threshold": 0.5,
+    "threshold_status": "Diagnostic only. Final decision threshold not selected.",
+    "best_aggregate_epoch": 26,
+    "best_aggregate_mean_validation_auc": 0.9329142857142857,
+    "best_aggregate_validation_auc_std": 0.020010609430897355,
+    "individual_best_auc_mean": 0.9592380952380953,
+    "individual_best_auc_std": 0.019175286437947244,
+    "individual_best_epoch_mean": 24.6,
+    "individual_best_epoch_std": 26.548069609672186,
+    "run03_role": "Epoch-wise cross-validation results will be used to determine the fixed training epoch."
+}

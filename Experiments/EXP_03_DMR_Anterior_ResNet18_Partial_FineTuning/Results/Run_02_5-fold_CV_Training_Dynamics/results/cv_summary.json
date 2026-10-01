@@ -1,0 +1,95 @@
+{
+    "experiment_name": "EXP03_DMR_Anterior_ResNet18_Partial_FineTuning",
+    "run_name": "Run_02_5-fold_CV_Training_Dynamics",
+    "seed": 10,
+    "seed_reset_each_fold": true,
+    "num_folds": 5,
+    "image_size": 224,
+    "batch_size": 16,
+    "epochs": 100,
+    "layer4_learning_rate": 0.0001,
+    "classifier_learning_rate": 0.001,
+    "dropout_rate": 0.3,
+    "diagnostic_threshold": 0.5,
+    "threshold_status": "diagnostic_only",
+    "pooled_train_validation_samples": 197,
+    "healthy_samples": 125,
+    "sick_samples": 72,
+    "test_loaded": false,
+    "test_evaluated": false,
+    "test_used_during_training": false,
+    "backbone": "ResNet-18",
+    "pretrained_weights": "ImageNet1K_V1",
+    "fine_tuning_strategy": "Partial fine-tuning",
+    "frozen_layers": [
+        "conv1",
+        "bn1",
+        "layer1",
+        "layer2",
+        "layer3"
+    ],
+    "trainable_layers": [
+        "layer4",
+        "fc"
+    ],
+    "temperature_range_source": "Training split of each fold only",
+    "class_weight_source": "Training labels of each fold only",
+    "model_selection_metric": "Validation ROC-AUC",
+    "best_aggregate_epoch": 26,
+    "best_aggregate_mean_validation_auc": 0.9329142857142857,
+    "best_aggregate_validation_auc_std": 0.020010609430897355,
+    "individual_best_auc_mean": 0.9592380952380953,
+    "individual_best_auc_std": 0.019175286437947244,
+    "individual_best_epoch_mean": 24.6,
+    "individual_best_epoch_std": 26.548069609672186,
+    "metrics": {
+        "best_validation_auc": {
+            "mean": 0.9592380952380953,
+            "std": 0.019175286437947244
+        },
+        "best_epoch": {
+            "mean": 24.6,
+            "std": 26.548069609672186
+        },
+        "validation_roc_auc": {
+            "mean": 0.9592380952380953,
+            "std": 0.019175286437947244
+        },
+        "validation_pr_auc": {
+            "mean": 0.9444403666675212,
+            "std": 0.026970026286255527
+        },
+        "accuracy": {
+            "mean": 0.857948717948718,
+            "std": 0.0462018980629085
+        },
+        "balanced_accuracy": {
+            "mean": 0.8589523809523809,
+            "std": 0.02231601521659702
+        },
+        "sensitivity": {
+            "mean": 0.8619047619047618,
+            "std": 0.08478330387983264
+        },
+        "specificity": {
+            "mean": 0.8560000000000001,
+            "std": 0.11523888232710346
+        },
+        "precision": {
+            "mean": 0.8002139037433155,
+            "std": 0.1304054307444284
+        },
+        "npv": {
+            "mean": 0.9205134575569358,
+            "std": 0.04689061954800177
+        },
+        "f1": {
+            "mean": 0.819572796934866,
+            "std": 0.038391418546876145
+        },
+        "mcc": {
+            "mean": 0.7188567972616121,
+            "std": 0.07090663916763913
+        }
+    }
+}

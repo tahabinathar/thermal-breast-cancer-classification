@@ -1,0 +1,11 @@
+Architecture: ResNet-18
+Pretrained weights: ImageNet1K_V1
+Fine-tuning strategy: Partial fine-tuning
+Frozen layers: conv1, bn1, layer1, layer2, layer3
+Trainable layers: layer4, fc
+Layer4 learning rate: 0.0001
+Classifier learning rate: 0.001
+Dropout: 0.3
+Total parameters: 11209409
+Trainable parameters: 8426625
+Frozen parameters: 2782784
