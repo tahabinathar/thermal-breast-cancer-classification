@@ -43,7 +43,7 @@ RUN 01
 │   ├── ImageNet pretrained ResNet-18
 │   ├── Backbone = Frozen
 │   ├── Input = 224×224×1
-│   ├── Classification head = 2048 → 64 → 1
+│   ├── Classification head = 512 → 64 → 1
 │   ├── ReLU activation
 │   ├── Dropout = 0.3
 │   └── Single binary logit output
@@ -78,7 +78,7 @@ RUN 01
 | Backbone            | ResNet-18                      |
 | Pretrained weights  | ImageNet                       |
 | Backbone training   | Frozen                         |
-| Classification head | 2048 → 64 → 1                  |
+| Classification head | 512 → 64 → 1                   |
 | Dropout             | 0.3                            |
 | Batch size          | 16                             |
 | Epochs              | 100                            |
@@ -256,7 +256,7 @@ Run_01_Baseline_Transfer_Learning/
 * Validation images: **34**
 * Test images: **37, not used**
 * Model: **ImageNet-pretrained ResNet-18 with frozen backbone**
-* Classification head: **2048 → 64 → 1**
+* Classification head: **512 → 64 → 1**
 * Maximum epochs: **100**
 * Best epoch: **1**
 * Best validation ROC-AUC: **0.9053**
