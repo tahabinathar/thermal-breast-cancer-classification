@@ -9,8 +9,8 @@
     "overall_oof_roc_auc": 0.9194444444444444,
     "overall_oof_pr_auc": 0.880196829320646,
     "minimum_sensitivity": 0.91,
-    "minimum_specificity": 0.7,
-    "valid_thresholds": 5,
-    "selected_threshold": 0.03882000222802162,
+    "minimum_specificity": 0.6,
+    "valid_thresholds": 18,
+    "selected_threshold": 0.02753516286611557,
     "test_set_used": false
 }

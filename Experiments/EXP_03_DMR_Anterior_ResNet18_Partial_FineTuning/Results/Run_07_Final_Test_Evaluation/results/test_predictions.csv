@@ -22,10 +22,10 @@ D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_RO
 D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Healthy\test_healthy_patient64_anterior_ROI.tif,0,Healthy,0.021885225549340248,0,Healthy
 D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Healthy\test_healthy_patient67_anterior_ROI.tif,0,Healthy,0.16700910031795502,1,Sick
 D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Healthy\test_healthy_patient93_anterior_ROI.tif,0,Healthy,0.11723574995994568,1,Sick
-D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Healthy\test_healthy_patient96_anterior_ROI.tif,0,Healthy,0.038164444267749786,0,Healthy
-D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Sick\test_sick_patient179_anterior_ROI.tif,1,Sick,0.02853691391646862,0,Healthy
+D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Healthy\test_healthy_patient96_anterior_ROI.tif,0,Healthy,0.038164444267749786,1,Sick
+D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Sick\test_sick_patient179_anterior_ROI.tif,1,Sick,0.02853691391646862,1,Sick
 D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Sick\test_sick_patient256_anterior_ROI.tif,1,Sick,0.9665380716323853,1,Sick
-D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Sick\test_sick_patient267_anterior_ROI.tif,1,Sick,0.03265935555100441,0,Healthy
+D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Sick\test_sick_patient267_anterior_ROI.tif,1,Sick,0.03265935555100441,1,Sick
 D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Sick\test_sick_patient287_anterior_ROI.tif,1,Sick,0.3578302264213562,1,Sick
 D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Sick\test_sick_patient312_anterior_ROI.tif,1,Sick,0.993602454662323,1,Sick
 D:\HITEC\STUDENT\NEW PROJECT\Breast_Thermography\Dataset\DMR_IR_Anterior_View_ROI\Test\Sick\test_sick_patient319_anterior_ROI.tif,1,Sick,0.904720664024353,1,Sick

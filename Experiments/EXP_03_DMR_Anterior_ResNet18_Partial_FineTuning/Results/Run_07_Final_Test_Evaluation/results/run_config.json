@@ -22,7 +22,7 @@
     "layer4_learning_rate": 0.0001,
     "classifier_learning_rate": 0.001,
     "dropout_rate": 0.3,
-    "threshold": 0.03882000222802162,
+    "threshold": 0.02753516286611557,
     "threshold_source": "Run_05_OOF_Threshold_Selection",
     "temperature_normalization": {
         "method": "global_min_max",

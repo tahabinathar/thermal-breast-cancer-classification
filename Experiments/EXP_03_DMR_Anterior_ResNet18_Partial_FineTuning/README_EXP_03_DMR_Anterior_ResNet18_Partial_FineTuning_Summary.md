@@ -119,23 +119,33 @@ EXP03 uses an ImageNet-pretrained ResNet-18.
 
 ```text
 Architecture:
+
 ResNet-18
 
 Pretrained weights:
+
 ImageNet1K_V1
 
 Input:
+
 224 × 224 × 3
 
 Frozen:
+
 conv1
+
 bn1
+
 layer1
+
 layer2
+
 layer3
 
 Trainable:
+
 layer4
+
 classifier
 ```
 
@@ -143,8 +153,11 @@ The original ResNet-18 classifier is replaced with:
 
 ```text
 Linear(512, 64)
+
 ReLU
+
 Dropout(0.3)
+
 Linear(64, 1)
 ```
 
@@ -152,7 +165,9 @@ The model contains:
 
 ```text
 Total parameters       = 11,209,409
+
 Trainable parameters   = 8,426,625
+
 Frozen parameters      = 2,782,784
 ```
 
@@ -162,24 +177,31 @@ Approximately 75.17% of the model parameters are trainable.
 
 ```text
 Optimizer:
+
 Adam
 
 Layer4 learning rate:
+
 1e-4
 
 Classifier learning rate:
+
 1e-3
 
 Batch size:
+
 16
 
 Dropout:
+
 0.3
 
 Loss:
+
 Weighted BCEWithLogitsLoss
 
 Seed:
+
 10
 ```
 
@@ -189,6 +211,7 @@ For final development training, the class weights are:
 
 ```text
 Healthy weight = 0.788000
+
 Sick weight    = 1.368056
 
 pos_weight = 1.736111
@@ -200,10 +223,15 @@ pos_weight = 1.736111
 Seed = 10
 
 Python random seed
+
 NumPy seed
+
 PyTorch seed
+
 CUDA seed when available
+
 Deterministic algorithms enabled
+
 NUM_WORKERS = 0
 ```
 
@@ -237,6 +265,7 @@ The final development temperature range used in Run 06 and Run 07 is:
 
 ```text
 Minimum = 22.000000
+
 Maximum = 36.812618
 ```
 
@@ -246,23 +275,41 @@ No Test-set statistics are used to determine the normalization range.
 
 ```text
 Raw thermal image
+
         ↓
+
 Temperature normalization
+
         ↓
+
 Valid-pixel masking
+
         ↓
+
 Clip to [0, 1]
+
         ↓
+
 Zero padding to square
+
         ↓
+
 Convert to uint8
+
         ↓
+
 Resize to 224 × 224
+
         ↓
+
 Convert grayscale to 3 channels
+
         ↓
+
 ImageNet normalization
+
         ↓
+
 ResNet-18
 ```
 
@@ -276,6 +323,7 @@ Training images use:
 
 ```text
 RandomRotation(18°)
+
 RandomAffine(scale = 0.95–1.05)
 ```
 
@@ -299,16 +347,23 @@ The Test set is not loaded or used.
 
 ```text
 Training:
+
 163 images
+
 Healthy = 103
+
 Sick = 60
 
 Validation:
+
 34 images
+
 Healthy = 22
+
 Sick = 12
 
 Test:
+
 Not used
 ```
 
@@ -316,13 +371,17 @@ Not used
 
 ```text
 Maximum epochs = 100
+
 Batch size = 16
 
 Layer4 LR = 1e-4
+
 Classifier LR = 1e-3
 
 Optimizer = Adam
+
 Loss = Weighted BCEWithLogitsLoss
+
 Seed = 10
 ```
 
@@ -338,6 +397,7 @@ The best validation ROC-AUC occurred at:
 
 ```text
 Best epoch = 96
+
 Validation ROC-AUC = 0.9432
 ```
 
@@ -362,14 +422,23 @@ Using threshold 0.5:
 
 ```text
 ROC-AUC            = 0.9432
+
 PR-AUC             = 0.9155
+
 Accuracy           = 0.7353
+
 Balanced Accuracy  = 0.7955
+
 Sensitivity        = 1.0000
+
 Specificity        = 0.5909
+
 Precision          = 0.5714
+
 NPV                = 1.0000
+
 F1-score           = 0.7273
+
 MCC                = 0.5811
 ```
 
@@ -377,8 +446,11 @@ Confusion matrix:
 
 ```text
 TN = 13
+
 FP = 9
+
 FN = 0
+
 TP = 12
 ```
 
@@ -421,18 +493,23 @@ Five-fold aggregate training dynamics are then calculated using the validation r
 
 ```text
 Development images = 197
+
 Folds = 5
+
 Epochs per fold = 100
 
 Batch size = 16
 
 Layer4 LR = 1e-4
+
 Classifier LR = 1e-3
 
 Optimizer = Adam
+
 Dropout = 0.3
 
 Selection metric = Validation ROC-AUC
+
 Diagnostic threshold = 0.5
 ```
 
@@ -468,6 +545,7 @@ The highest mean epoch-wise validation ROC-AUC occurred at:
 Epoch = 26
 
 Mean validation ROC-AUC = 0.9329
+
 SD = 0.0200
 ```
 
@@ -475,9 +553,13 @@ At epoch 26, the fold validation AUCs were:
 
 ```text
 Fold 1 = 0.9200
+
 Fold 2 = 0.9360
+
 Fold 3 = 0.9514
+
 Fold 4 = 0.9514
+
 Fold 5 = 0.9057
 ```
 
@@ -493,12 +575,15 @@ The candidate epochs are derived from:
 
 ```text
 Fold-specific best epochs:
+
 5, 10, 12, 26, 70
 
 Aggregate epoch-wise best:
+
 26
 
 Full training duration:
+
 100
 ```
 
@@ -573,6 +658,7 @@ The fixed training epoch was selected using the highest mean 5-fold validation R
 Selected epoch = 10
 
 Mean validation ROC-AUC = 0.932114
+
 SD = 0.025803
 ```
 
@@ -608,11 +694,17 @@ For each fold:
 
 ```text
 Train on 4 folds
+
         ↓
+
 Train exactly 10 epochs
+
         ↓
+
 Predict the held-out fold
+
         ↓
+
 Store raw Sick probabilities
 ```
 
@@ -626,8 +718,11 @@ The final model state at epoch 10 is used for held-out predictions.
 
 ```text
 Total development images = 197
+
 OOF predictions           = 197
+
 Missing predictions       = 0
+
 Missing fold assignments  = 0
 ```
 
@@ -637,6 +732,7 @@ Every development image therefore receives exactly one out-of-fold prediction.
 
 ```text
 ROC-AUC = 0.919444
+
 PR-AUC  = 0.880197
 ```
 
@@ -676,15 +772,19 @@ A threshold is considered valid only when:
 
 ```text
 Sensitivity > 0.91
+
 AND
-Specificity > 0.70
+
+Specificity > 0.60
 ```
 
 Among valid thresholds, selection follows:
 
 ```text
 1. Highest sensitivity
+
 2. Highest specificity
+
 3. Highest threshold
 ```
 
@@ -693,35 +793,44 @@ This is a constraint-based threshold selection procedure rather than selection b
 ### Selected Threshold
 
 ```text
-Selected threshold = 0.038820
+Selected threshold = 0.027535
 ```
 
-Five thresholds satisfied the required sensitivity and specificity constraints.
+Eighteen thresholds satisfied the required sensitivity and specificity constraints.
 
 ### OOF Performance at Selected Threshold
 
 ```text
-Sensitivity        = 0.9444
-Specificity        = 0.7040
-Accuracy           = 0.7919
-Balanced Accuracy  = 0.8242
-Precision          = 0.6476
-F1-score           = 0.7684
+Sensitivity        = 0.9583
+
+Specificity        = 0.6720
+
+Accuracy           = 0.7766
+
+Balanced Accuracy  = 0.8152
+
+Precision          = 0.6273
+
+F1-score           = 0.7582
 ```
 
 Confusion matrix:
 
 ```text
-TN = 88
-FP = 37
-FN = 4
-TP = 68
+TN = 84
+
+FP = 41
+
+FN = 3
+
+TP = 69
 ```
 
 The corresponding ranking metrics remain:
 
 ```text
 ROC-AUC = 0.919444
+
 PR-AUC  = 0.880197
 ```
 
@@ -730,7 +839,7 @@ PR-AUC  = 0.880197
 Run 05 fixes the classification threshold before final training and Test evaluation.
 
 ```text
-Final threshold = 0.038820
+Final threshold = 0.027535
 ```
 
 The Test set is not used during threshold selection.
@@ -749,6 +858,7 @@ Run 06 trains the final EXP03 model using all available development data after t
 Development images = 197
 
 Healthy = 125
+
 Sick    = 72
 ```
 
@@ -762,6 +872,7 @@ Development-only temperature range:
 
 ```text
 Minimum = 22.000000
+
 Maximum = 36.812618
 ```
 
@@ -769,6 +880,7 @@ Final development class weights:
 
 ```text
 Healthy = 0.788000
+
 Sick    = 1.368056
 
 pos_weight = 1.736111
@@ -778,17 +890,25 @@ pos_weight = 1.736111
 
 ```text
 Architecture = ResNet-18
+
 Weights = ImageNet1K_V1
 
 Frozen:
+
 conv1
+
 bn1
+
 layer1
+
 layer2
+
 layer3
 
 Trainable:
+
 layer4
+
 classifier
 ```
 
@@ -796,7 +916,9 @@ Parameters:
 
 ```text
 Total      = 11,209,409
+
 Trainable  = 8,426,625
+
 Frozen     = 2,782,784
 ```
 
@@ -804,8 +926,11 @@ Classifier:
 
 ```text
 Linear(512, 64)
+
 ReLU
+
 Dropout(0.3)
+
 Linear(64, 1)
 ```
 
@@ -813,13 +938,17 @@ Linear(64, 1)
 
 ```text
 Epochs = 10
+
 Batch size = 16
+
 Optimizer = Adam
 
 Layer4 LR = 1e-4
+
 Classifier LR = 1e-3
 
 Loss = Weighted BCEWithLogitsLoss
+
 Seed = 10
 ```
 
@@ -849,7 +978,7 @@ Results/Run_06_Final_Training/model/final_model_epoch10.pth
 The threshold from Run 05 is carried forward:
 
 ```text
-Threshold = 0.038820
+Threshold = 0.027535
 ```
 
 The threshold is not involved in gradient-based model training.
@@ -872,7 +1001,9 @@ The final model from Run 06 and the fixed threshold from Run 05 are used without
 
 ```text
 Healthy = 24
+
 Sick    = 13
+
 Total   = 37
 ```
 
@@ -880,7 +1011,9 @@ The Test-set integrity check passed:
 
 ```text
 Total images = 37
+
 Healthy = 24
+
 Sick = 13
 ```
 
@@ -890,6 +1023,7 @@ The Run 06 development-derived temperature range is used:
 
 ```text
 Minimum = 22.000000
+
 Maximum = 36.812618
 ```
 
@@ -897,23 +1031,41 @@ Processing:
 
 ```text
 Raw thermal image
+
         ↓
+
 Temperature normalization
+
         ↓
+
 Valid-pixel masking
+
         ↓
+
 Clip to [0, 1]
+
         ↓
+
 Zero padding to square
+
         ↓
+
 Convert to uint8
+
         ↓
+
 Resize to 224 × 224
+
         ↓
+
 Convert grayscale to 3 channels
+
         ↓
+
 ImageNet normalization
+
         ↓
+
 ResNet-18
 ```
 
@@ -924,14 +1076,15 @@ No random augmentation is applied.
 The threshold established in Run 05 is used without modification:
 
 ```text
-Threshold = 0.038820
+Threshold = 0.027535
 ```
 
 Classification:
 
 ```text
-Probability >= 0.038820 → Sick
-Probability <  0.038820 → Healthy
+Probability >= 0.027535 → Sick
+
+Probability <  0.027535 → Healthy
 ```
 
 No threshold tuning is performed using Test predictions.
@@ -941,56 +1094,63 @@ No threshold tuning is performed using Test predictions.
 | Metric | Test Result |
 |---|---|
 | ROC-AUC | 0.9359 |
-| Accuracy | 0.7027 |
-| Balanced Accuracy | 0.7356 |
-| Sensitivity | 0.8462 |
-| Specificity | 0.6250 |
-| Precision | 0.5500 |
-| F1-score | 0.6667 |
-| MCC | 0.4513 |
-| Classification Threshold | 0.038820 |
+| Accuracy | 0.7297 |
+| Balanced Accuracy | 0.7917 |
+| Sensitivity | 1.0000 |
+| Specificity | 0.5833 |
+| Precision | 0.5652 |
+| F1-score | 0.7222 |
+| MCC | 0.5742 |
+| Classification Threshold | 0.027535 |
 
 ### Confusion Matrix
 
 ```text
                 Predicted
-              Healthy   Sick
 
-Actual Healthy    15       9
-       Sick        2      11
+                Healthy   Sick
+
+Actual Healthy     14       10
+
+       Sick         0       13
 ```
 
 Therefore:
 
 ```text
-TN = 15
-FP = 9
-FN = 2
-TP = 11
+TN = 14
+
+FP = 10
+
+FN = 0
+
+TP = 13
 ```
 
 For the 24 Healthy images:
 
 ```text
-Correctly classified as Healthy = 15
-Incorrectly classified as Sick   = 9
+Correctly classified as Healthy = 14
+
+Incorrectly classified as Sick   = 10
 ```
 
 For the 13 Sick images:
 
 ```text
-Correctly classified as Sick     = 11
-Incorrectly classified as Healthy = 2
+Correctly classified as Sick      = 13
+
+Incorrectly classified as Healthy = 0
 ```
 
 The resulting metrics are internally consistent:
 
 ```text
-Sensitivity = 11 / 13 = 0.8462
+Sensitivity = 13 / 13 = 1.0000
 
-Specificity = 15 / 24 = 0.6250
+Specificity = 14 / 24 = 0.5833
 
-Accuracy = (15 + 11) / 37 = 0.7027
+Accuracy = (14 + 13) / 37 = 0.7297
 ```
 
 ### ROC-AUC Interpretation
@@ -1006,7 +1166,7 @@ ROC-AUC evaluates the ranking of model predictions across thresholds.
 Accuracy, sensitivity, specificity, precision and F1-score are threshold-dependent and were calculated using the pre-specified threshold:
 
 ```text
-0.038820
+0.027535
 ```
 
 Therefore, ROC-AUC should be interpreted separately from the threshold-dependent classification metrics.
@@ -1019,39 +1179,73 @@ The complete EXP03 methodology can be summarized as:
 
 ```text
 Partial Fine-Tuning Baseline
+
         │
+
         │ Run 01
+
         ↓
+
 Observe training/validation dynamics
+
         │
+
         │ Run 02
+
         ↓
+
 5-Fold CV training dynamics
+
         │
+
         ↓
+
 Identify representative candidate epochs
+
         │
+
         │ Run 03
+
         ↓
+
 Formal fixed-epoch comparison
+
         │
+
         ↓
+
 Select epoch 10
+
         │
+
         │ Run 04
+
         ↓
+
 Generate 197 OOF predictions
+
         │
+
         │ Run 05
+
         ↓
-Select threshold 0.038820
+
+Select threshold 0.027535
+
         │
+
         │ Run 06
+
         ↓
+
 Train final model on all 197 development images
+
         │
+
         │ Run 07
+
         ↓
+
 Evaluate once on independent 37-image Test set
 ```
 
@@ -1059,15 +1253,25 @@ This progression separates:
 
 ```text
 Model configuration
+
         ↓
+
 Training-duration selection
+
         ↓
+
 Prediction generation
+
         ↓
+
 Threshold selection
+
         ↓
+
 Final training
+
         ↓
+
 Final evaluation
 ```
 
@@ -1081,16 +1285,20 @@ The final EXP03 model is a partially fine-tuned ImageNet-pretrained ResNet-18 wi
 
 ```text
 Trainable:
+
 layer4 + classifier
 
 Frozen:
+
 conv1 + bn1 + layer1 + layer2 + layer3
 
 Fixed training duration:
+
 10 epochs
 
 Final classification threshold:
-0.038820
+
+0.027535
 ```
 
 The model was trained using all 197 development images.
@@ -1101,27 +1309,37 @@ Final Test performance:
 
 ```text
 ROC-AUC           = 0.9359
-Accuracy          = 70.27%
-Balanced Accuracy = 73.56%
-Sensitivity       = 84.62%
-Specificity       = 62.50%
-Precision         = 55.00%
-F1-score          = 66.67%
-MCC               = 45.13%
+
+Accuracy          = 72.97%
+
+Balanced Accuracy = 79.17%
+
+Sensitivity       = 100.00%
+
+Specificity       = 58.33%
+
+Precision         = 56.52%
+
+F1-score          = 72.22%
+
+MCC               = 57.42%
 ```
 
 Confusion matrix:
 
 ```text
-TN = 15
-FP = 9
-FN = 2
-TP = 11
+TN = 14
+
+FP = 10
+
+FN = 0
+
+TP = 13
 ```
 
 The final Test ROC-AUC of 0.9359 reflects the ranking performance of the final model on the independent Test set.
 
-The threshold-dependent metrics were calculated using the classification threshold of 0.038820 that had been fixed using development-set OOF predictions before Test evaluation.
+The threshold-dependent metrics were calculated using the classification threshold of 0.027535 that had been fixed using development-set OOF predictions before Test evaluation.
 
 ---
 
@@ -1144,15 +1362,25 @@ The Test set was accessed only in Run 07 after:
 
 ```text
 Model configuration was fixed
+
         ↓
+
 Training epoch was fixed
+
         ↓
+
 OOF predictions were generated
+
         ↓
+
 Classification threshold was fixed
+
         ↓
+
 Final model was trained
+
         ↓
+
 Final Test evaluation was performed
 ```
 
@@ -1168,17 +1396,29 @@ The complete EXP03 directory contains the individual run outputs.
 EXP_03_DMR_Anterior_ResNet18_Partial_FineTuning/
 
 ├── Run_01_Partial_FineTuning_Baseline/
+
 │
+
 ├── Run_02_5-fold_CV_Training_Dynamics/
+
 │
+
 ├── Run_03_Fixed_Epoch_Selection/
+
 │
+
 ├── Run_04_5-fold_CV_OOF_Predictions/
+
 │
+
 ├── Run_05_OOF_Threshold_Selection/
+
 │
+
 ├── Run_06_Final_Training/
+
 │
+
 └── Run_07_Final_Test_Evaluation/
 ```
 
@@ -1188,18 +1428,31 @@ EXP_03_DMR_Anterior_ResNet18_Partial_FineTuning/
 Run_01_Partial_FineTuning_Baseline/
 
 ├── README.md
+
 ├── results/
+
 │   ├── validation_metrics.json
+
 │   ├── validation_roc_data.json
+
 │   ├── training_history.json
+
 │   ├── training_summary.json
+
 │   └── model_summary.txt
+
 ├── checkpoints/
+
 │   └── resnet18_partial_finetuning_best.pth
+
 └── plots/
+
     ├── training_validation_loss.png
+
     ├── training_validation_accuracy.png
+
     ├── training_validation_auc.png
+
     └── validation_roc_curve.png
 ```
 
@@ -1209,19 +1462,33 @@ Run_01_Partial_FineTuning_Baseline/
 Run_02_5-fold_CV_Training_Dynamics/
 
 ├── README.md
+
 ├── results/
+
 │   ├── fold_summary.csv
+
 │   ├── fold_temperature_ranges.json
+
 │   ├── aggregate_epoch_metrics.csv
+
 │   ├── cv_summary.json
+
 │   ├── training_summary.json
+
 │   ├── model_summary.txt
+
 │   └── run_summary.json
+
 ├── Fold_1/
+
 ├── Fold_2/
+
 ├── Fold_3/
+
 ├── Fold_4/
+
 ├── Fold_5/
+
 └── plots/
 ```
 
@@ -1231,16 +1498,27 @@ Run_02_5-fold_CV_Training_Dynamics/
 Run_03_Fixed_Epoch_Selection/
 
 ├── README.md
+
 ├── results/
+
 │   ├── candidate_epochs.json
+
 │   ├── candidate_epoch_comparison.json
+
 │   ├── candidate_epoch_comparison.csv
+
 │   └── run_summary.json
+
 ├── epoch_5/
+
 ├── epoch_10/
+
 ├── epoch_12/
+
 ├── epoch_26/
+
 ├── epoch_70/
+
 └── epoch_100/
 ```
 
@@ -1252,29 +1530,53 @@ Each candidate epoch contains results from all five folds.
 Run_04_5-fold_CV_OOF_Predictions/
 
 ├── README.md
+
 ├── results/
+
 │   ├── fold_1_predictions.csv
+
 │   ├── fold_2_predictions.csv
+
 │   ├── fold_3_predictions.csv
+
 │   ├── fold_4_predictions.csv
+
 │   ├── fold_5_predictions.csv
+
 │   ├── fold_1_temperature_range.json
+
 │   ├── fold_2_temperature_range.json
+
 │   ├── fold_3_temperature_range.json
+
 │   ├── fold_4_temperature_range.json
+
 │   ├── fold_5_temperature_range.json
+
 │   ├── fold_1_training_history.json
+
 │   ├── fold_2_training_history.json
+
 │   ├── fold_3_training_history.json
+
 │   ├── fold_4_training_history.json
+
 │   ├── fold_5_training_history.json
+
 │   ├── fold_1_summary.json
+
 │   ├── fold_2_summary.json
+
 │   ├── fold_3_summary.json
+
 │   ├── fold_4_summary.json
+
 │   ├── fold_5_summary.json
+
 │   ├── oof_predictions.csv
+
 │   ├── fold_summary.csv
+
 │   └── run_summary.json
 ```
 
@@ -1284,12 +1586,19 @@ Run_04_5-fold_CV_OOF_Predictions/
 Run_05_OOF_Threshold_Selection/
 
 ├── README.md
+
 ├── results/
+
 │   ├── threshold_analysis.csv
+
 │   ├── selected_threshold.json
+
 │   └── overall_summary.json
+
 └── plots/
+
     ├── sensitivity_specificity_vs_threshold.png
+
     └── valid_thresholds.png
 ```
 
@@ -1299,13 +1608,21 @@ Run_05_OOF_Threshold_Selection/
 Run_06_Final_Training/
 
 ├── README.md
+
 ├── model/
+
 │   └── final_model_epoch10.pth
+
 ├── temperature_range.json
+
 ├── training_history.json
+
 ├── run_config.json
+
 ├── development_manifest.csv
+
 └── plots/
+
     └── training_loss.png
 ```
 
@@ -1315,14 +1632,23 @@ Run_06_Final_Training/
 Run_07_Final_Test_Evaluation/
 
 ├── README.md
+
 ├── config/
+
 │   └── run_config.json
+
 ├── metrics/
+
 │   └── test_metrics.json
+
 ├── predictions/
+
 │   └── test_predictions.csv
+
 └── plots/
+
     ├── test_roc_curve.png
+
     └── test_confusion_matrix.png
 ```
 
@@ -1348,14 +1674,40 @@ Run 04 then generated one out-of-fold prediction for every development image usi
 
 ```text
 197 / 197 OOF predictions
+
 OOF ROC-AUC = 0.919444
+
 OOF PR-AUC  = 0.880197
 ```
 
 Run 05 selected the final classification threshold from these OOF predictions:
 
 ```text
-Threshold = 0.038820
+Threshold = 0.027535
+```
+
+The threshold was selected using the constraints:
+
+```text
+Sensitivity > 0.91
+
+Specificity > 0.60
+```
+
+Eighteen thresholds satisfied these constraints. The selected threshold achieved:
+
+```text
+Sensitivity        = 0.9583
+
+Specificity        = 0.6720
+
+Accuracy           = 0.7766
+
+Balanced Accuracy  = 0.8152
+
+Precision          = 0.6273
+
+F1-score           = 0.7582
 ```
 
 Run 06 trained the final partially fine-tuned ResNet-18 for exactly 10 epochs using all 197 development images.
@@ -1368,25 +1720,34 @@ The final Test ROC-AUC was:
 0.9359
 ```
 
-At the pre-specified OOF-derived threshold of 0.038820:
+At the pre-specified OOF-derived threshold of 0.027535:
 
 ```text
-Accuracy          = 70.27%
-Balanced Accuracy = 73.56%
-Sensitivity       = 84.62%
-Specificity       = 62.50%
-Precision         = 55.00%
-F1-score          = 66.67%
-MCC               = 45.13%
+Accuracy          = 72.97%
+
+Balanced Accuracy = 79.17%
+
+Sensitivity       = 100.00%
+
+Specificity       = 58.33%
+
+Precision         = 56.52%
+
+F1-score          = 72.22%
+
+MCC               = 57.42%
 ```
 
 The final confusion matrix was:
 
 ```text
-TN = 15
-FP = 9
-FN = 2
-TP = 11
+TN = 14
+
+FP = 10
+
+FN = 0
+
+TP = 13
 ```
 
 The Test set was isolated from all model-development decisions and was used only for the final evaluation in Run 07.
@@ -1395,17 +1756,29 @@ Therefore, the complete EXP03 pipeline is:
 
 ```text
 Partial Fine-Tuning
+
         ↓
+
 Cross-Validated Training Dynamics
+
         ↓
+
 Fixed Epoch Selection
+
         ↓
+
 OOF Prediction Generation
+
         ↓
+
 OOF Threshold Selection
+
         ↓
+
 Final Development Training
+
         ↓
+
 Independent Test Evaluation
 ```
 
