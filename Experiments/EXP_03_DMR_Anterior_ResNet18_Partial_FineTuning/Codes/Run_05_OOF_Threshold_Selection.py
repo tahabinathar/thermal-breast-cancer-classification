@@ -71,7 +71,7 @@ os.makedirs(
 # ============================================================
 
 MIN_SENSITIVITY = 0.91
-MIN_SPECIFICITY = 0.70
+MIN_SPECIFICITY = 0.60
 
 SEED = 10
 
