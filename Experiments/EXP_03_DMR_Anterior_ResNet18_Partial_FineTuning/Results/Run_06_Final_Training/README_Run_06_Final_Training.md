@@ -22,9 +22,9 @@ The final configuration is:
 * Batch size = `16`
 * Seed = `10`
 * Weighted BCEWithLogitsLoss
-* Selected classification threshold = `0.03882`
+* Selected classification threshold = `0.027535`
 
-The 10-epoch training duration was selected in Run 03 using 5-fold validation ROC-AUC. The classification threshold of `0.03882` was selected in Run 05 using out-of-fold predictions.
+The 10-epoch training duration was selected in Run 03 using 5-fold validation ROC-AUC. The classification threshold of `0.027535` was selected in Run 05 using out-of-fold predictions.
 
 The test set was not loaded, accessed or evaluated during Run 06.
 
@@ -87,7 +87,7 @@ Weighted BCEWithLogitsLoss
 Final Model
         │
         ▼
-Classification threshold = 0.03882
+Classification threshold = 0.027535
         │
         ▼
 Saved for final test evaluation
@@ -121,7 +121,7 @@ The test set remains completely isolated from the final training process.
 | Development Images | 197 |
 | Healthy Images | 125 |
 | Sick Images | 72 |
-| Selected Threshold | 0.03882 |
+| Selected Threshold | 0.027535 |
 | Test Set | Not Used |
 
 ---
@@ -366,7 +366,7 @@ Global maximum = 36.812618
 The threshold was determined before final training from the OOF predictions generated in Run 04 and evaluated in Run 05.
 
 ```text
-Selected threshold = 0.03882
+Selected threshold = 0.027535
 ```
 
 The threshold is not used during gradient-based model training. It is carried forward for conversion of the final model output probabilities into binary predictions during the subsequent Test evaluation.
@@ -407,7 +407,7 @@ Model:
     Trainable parameters = 8,426,625
 
 Threshold:
-    0.03882
+    0.027535
 ```
 
 The final model is the model state obtained after exactly 10 epochs.
@@ -489,7 +489,7 @@ Training loss:
     Epoch 10 = 0.172078
 
 Selected threshold:
-    0.03882
+    0.027535
 
 Test set:
     NOT USED
