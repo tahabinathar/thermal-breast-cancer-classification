@@ -49,8 +49,11 @@ The model architecture is based on ImageNet-pretrained ResNet-18.
 
 ```text
 Linear(512, 64)
+
 ReLU
+
 Dropout(0.3)
+
 Linear(64, 1)
 ```
 
@@ -77,7 +80,7 @@ The 10-epoch training duration was selected through the preceding 5-fold cross-v
 The final classification threshold was selected in Run 05 from development-set out-of-fold predictions.
 
 ```text
-Selected threshold = 0.038820
+Selected threshold = 0.027535
 ```
 
 The Test predictions were evaluated using this fixed threshold without any further adjustment.
@@ -106,7 +109,7 @@ The Test predictions were evaluated using this fixed threshold without any furth
 | Training data | Train + Validation |
 | Development images | 197 |
 | Test images | 37 |
-| Threshold | 0.038820 |
+| Threshold | 0.027535 |
 | Threshold source | Run 05 OOF Predictions |
 | Model source | Run 06 Final Training |
 | Test used for training | No |
@@ -200,7 +203,7 @@ Results/Run_06_Final_Training/model/final_model_epoch10.pth
 The fixed threshold from Run 05 was loaded:
 
 ```text
-Threshold = 0.038820
+Threshold = 0.027535
 ```
 
 For each Test image, the model produced a probability of the Sick class.
@@ -208,8 +211,8 @@ For each Test image, the model produced a probability of the Sick class.
 Classification was performed as:
 
 ```text
-Probability >= 0.038820  → Sick
-Probability <  0.038820  → Healthy
+Probability >= 0.027535  → Sick
+Probability <  0.027535  → Healthy
 ```
 
 No threshold tuning was performed using Test-set predictions.
@@ -235,31 +238,34 @@ The following metrics were calculated:
 | Metric | Test Result |
 |---|---|
 | ROC-AUC | 0.9359 |
-| Accuracy | 0.7027 |
-| Balanced Accuracy | 0.7356 |
-| Sensitivity | 0.8462 |
-| Specificity | 0.6250 |
-| Precision | 0.5500 |
-| F1-score | 0.6667 |
-| MCC | 0.4513 |
-| Classification Threshold | 0.038820 |
+| Accuracy | 0.7297 |
+| Balanced Accuracy | 0.7917 |
+| Sensitivity | 1.0000 |
+| Specificity | 0.5833 |
+| Precision | 0.5652 |
+| F1-score | 0.7222 |
+| MCC | 0.5742 |
+| Classification Threshold | 0.027535 |
 
 #### Confusion Matrix
 
 ```text
                 Predicted
-              Healthy   Sick
-Actual Healthy    15       9
-       Sick        2      11
+
+                Healthy   Sick
+
+Actual Healthy     14       10
+
+       Sick         0       13
 ```
 
 Therefore:
 
 ```text
-TN = 15
-FP = 9
-FN = 2
-TP = 11
+TN = 14
+FP = 10
+FN = 0
+TP = 13
 ```
 
 #### Class-wise Interpretation
@@ -267,33 +273,33 @@ TP = 11
 For the 24 Healthy Test images:
 
 ```text
-Correctly classified as Healthy: 15
-Incorrectly classified as Sick: 9
+Correctly classified as Healthy: 14
+Incorrectly classified as Sick: 10
 ```
 
 For the 13 Sick Test images:
 
 ```text
-Correctly classified as Sick: 11
-Incorrectly classified as Healthy: 2
+Correctly classified as Sick: 13
+Incorrectly classified as Healthy: 0
 ```
 
 The resulting sensitivity was:
 
 ```text
-11 / 13 = 0.8462
+13 / 13 = 1.0000
 ```
 
 The resulting specificity was:
 
 ```text
-15 / 24 = 0.6250
+14 / 24 = 0.5833
 ```
 
 The resulting accuracy was:
 
 ```text
-(15 + 11) / 37 = 0.7027
+(14 + 13) / 37 = 0.7297
 ```
 
 #### ROC-AUC
@@ -304,7 +310,7 @@ The final Test ROC-AUC was:
 ROC-AUC = 0.9359
 ```
 
-ROC-AUC evaluates the ranking of model predictions across thresholds, while accuracy, sensitivity, specificity, precision and F1-score are calculated using the fixed threshold of 0.038820.
+ROC-AUC evaluates the ranking of model predictions across thresholds, while accuracy, sensitivity, specificity, precision and F1-score are calculated using the fixed threshold of 0.027535.
 
 Therefore, the ROC-AUC should be interpreted separately from the threshold-dependent classification metrics.
 
@@ -327,13 +333,13 @@ The final Test results were:
 
 ```text
 ROC-AUC           = 0.9359
-Accuracy          = 0.7027
-Balanced Accuracy = 0.7356
-Sensitivity       = 0.8462
-Specificity       = 0.6250
-Precision         = 0.5500
-F1-score          = 0.6667
-MCC               = 0.4513
+Accuracy          = 0.7297
+Balanced Accuracy = 0.7917
+Sensitivity       = 1.0000
+Specificity       = 0.5833
+Precision         = 0.5652
+F1-score          = 0.7222
+MCC               = 0.5742
 ```
 
 The final Test evaluation is therefore considered complete.
@@ -346,7 +352,8 @@ No retraining, model selection or threshold tuning should be performed using the
 
 ```text
 EXP_03_DMR_Anterior_ResNet18_Partial_FineTuning/
-│── README.md
+│
+├── README.md
 │
 └── Results/
     │
@@ -374,20 +381,20 @@ The Run 07 outputs contain the final Test-set predictions, evaluation metrics, c
 
 Run 07 performed the final independent Test evaluation of the EXP03 partially fine-tuned ResNet-18 model.
 
-The model was trained on all 197 development images in Run 06 for the fixed 10 epochs selected through cross-validation. The classification threshold of 0.038820 was determined from development-set out-of-fold predictions in Run 05.
+The model was trained on all 197 development images in Run 06 for the fixed 10 epochs selected through cross-validation. The classification threshold of 0.027535 was determined from development-set out-of-fold predictions in Run 05.
 
 The independent Test set contained 37 images, including 24 Healthy and 13 Sick cases.
 
-The model achieved a Test ROC-AUC of 0.9359. Using the pre-specified threshold of 0.038820, the model achieved:
+The model achieved a Test ROC-AUC of 0.9359. Using the pre-specified threshold of 0.027535, the model achieved:
 
 ```text
-Accuracy          = 70.27%
-Balanced Accuracy = 73.56%
-Sensitivity       = 84.62%
-Specificity       = 62.50%
-Precision         = 55.00%
-F1-score          = 66.67%
-MCC               = 45.13%
+Accuracy          = 72.97%
+Balanced Accuracy = 79.17%
+Sensitivity       = 100.00%
+Specificity       = 58.33%
+Precision         = 56.52%
+F1-score          = 72.22%
+MCC               = 57.42%
 ```
 
 The Test set was used only once for final evaluation and was not used for training, model selection, threshold selection or tuning.
