@@ -1,0 +1,89 @@
+{
+  "experiment": "EXP_01_DMR_Multiview_ResNet18",
+  "run": "Run_03_Fixed_Epoch_Selection",
+  "development_patients": 165,
+  "healthy_patients": 101,
+  "sick_patients": 64,
+  "views": [
+    "Anterior_ROI",
+    "Left_Oblique_ROI",
+    "Right_Oblique_ROI"
+  ],
+  "image_size": 224,
+  "batch_size": 16,
+  "maximum_epochs": 100,
+  "n_folds": 5,
+  "threshold": 0.5,
+  "seed": 10,
+  "backbone": "ResNet-18 ImageNet1K_V1",
+  "backbone_frozen": true,
+  "features_per_view": 512,
+  "fusion_features": 1536,
+  "head_configs": {
+    "baseline": {
+      "run_name": "Run_03_A_Baseline",
+      "hidden_dim": 64,
+      "dropout": 0.3,
+      "weight_decay": 0.0,
+      "learning_rate": 0.001
+    },
+    "linear": {
+      "run_name": "Run_03_B_Linear_Fusion",
+      "hidden_dim": null,
+      "dropout": 0.0,
+      "weight_decay": 0.001,
+      "learning_rate": 0.001
+    },
+    "small": {
+      "run_name": "Run_03_C_Small_Regularized",
+      "hidden_dim": 16,
+      "dropout": 0.5,
+      "weight_decay": 0.001,
+      "learning_rate": 0.001
+    }
+  },
+  "selection_criterion": "Highest mean 5-fold validation ROC-AUC",
+  "tie_breaker": "Earlier epoch",
+  "fold_manifest_source": "Run_02_A_Baseline/fold_results/Fold_XX/fold_patient_split.json",
+  "combined_fold_manifest": "fold_patient_split.json",
+  "test_set_used": false,
+  "final_test_evaluation_performed": false,
+  "last_rerun_head": "small",
+  "selected_results_by_head": {
+    "small": {
+      "selected_epoch": 98,
+      "mean_roc_auc": 0.8796947496947496,
+      "std_roc_auc": 0.038070254166142035,
+      "mean_average_precision": 0.8368861827705574,
+      "std_average_precision": 0.06335322554051863,
+      "mean_accuracy": 0.793939393939394,
+      "mean_balanced_accuracy": 0.7745421245421247,
+      "mean_sensitivity": 0.6871794871794872,
+      "mean_specificity": 0.8619047619047621,
+      "mean_f1": 0.7211336553945248,
+      "mean_mcc": 0.5641387527156564
+    }
+  },
+  "candidate_information": {
+    "small": {
+      "aggregate_best_epoch": 95,
+      "aggregate_best_mean_auc": 0.8726495726495728,
+      "fold_best_epochs": {
+        "1": 53,
+        "2": 82,
+        "3": 3,
+        "4": 98,
+        "5": 28
+      },
+      "candidate_epochs": [
+        3,
+        28,
+        53,
+        82,
+        95,
+        98,
+        100
+      ]
+    }
+  }
+}

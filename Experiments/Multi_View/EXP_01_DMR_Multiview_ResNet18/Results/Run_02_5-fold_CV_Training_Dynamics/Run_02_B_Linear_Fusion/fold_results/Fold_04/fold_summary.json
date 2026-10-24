@@ -1,0 +1,32 @@
+{
+    "experiment_name": "EXP_01_DMR_Multiview_ResNet18",
+    "run_name": "Run_02_B_Linear_Fusion",
+    "fusion_head": "linear",
+    "classifier": "1536 -> 1",
+    "fold": 4,
+    "epochs_trained": 100,
+    "seed": 10,
+    "training_patients": 132,
+    "validation_patients": 33,
+    "temperature_min": 19.727609634399414,
+    "temperature_max": 36.84000015258789,
+    "threshold": 0.5,
+    "final_epoch_validation": {
+        "loss": 0.46176184488065314,
+        "accuracy": 0.7575757575757576,
+        "auc": 0.8615384615384616,
+        "average_precision": 0.8454112554112554,
+        "balanced_accuracy": 0.7326923076923078,
+        "precision": 0.7272727272727273,
+        "recall": 0.6153846153846154,
+        "specificity": 0.85,
+        "f1": 0.6666666666666666,
+        "mcc": 0.48238191061886604,
+        "tn": 17,
+        "fp": 3,
+        "fn": 5,
+        "tp": 8
+    },
+    "test_loaded": false,
+    "test_evaluated": false
+}

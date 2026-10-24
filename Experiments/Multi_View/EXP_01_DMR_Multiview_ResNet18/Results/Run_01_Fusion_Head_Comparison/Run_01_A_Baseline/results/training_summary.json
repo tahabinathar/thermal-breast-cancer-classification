@@ -1,0 +1,67 @@
+{
+    "experiment_name": "EXP_01_DMR_Multiview_ResNet18",
+    "run_name": "Run_01_A_Baseline",
+    "fusion_head": "baseline",
+    "seed": 10,
+    "backbone": "ImageNet-pretrained ResNet-18",
+    "backbone_frozen": true,
+    "views": [
+        "anterior",
+        "left_oblique",
+        "right_oblique"
+    ],
+    "fusion": "Feature concatenation",
+    "feature_dimension_per_view": 512,
+    "fused_feature_dimension": 1536,
+    "classifier": "1536 -> 64 -> 1",
+    "image_size": 224,
+    "batch_size": 16,
+    "maximum_epochs": 100,
+    "learning_rate": 0.001,
+    "dropout": 0.3,
+    "weight_decay": 0.0,
+    "threshold": 0.5,
+    "global_temperature_min": 21.510000228881836,
+    "global_temperature_max": 36.84000015258789,
+    "temperature_range_source": "Training images only",
+    "train_patient_count": 140,
+    "validation_patient_count": 25,
+    "train_class_counts": {
+        "Healthy": 84,
+        "Sick": 56
+    },
+    "validation_class_counts": {
+        "Healthy": 17,
+        "Sick": 8
+    },
+    "class_weights": {
+        "Healthy": 0.8333333134651184,
+        "Sick": 1.25
+    },
+    "total_parameters": 11274945,
+    "trainable_parameters": 98433,
+    "frozen_parameters": 11176512,
+    "best_epoch": 79,
+    "best_validation_auc": 0.7132352941176471,
+    "validation_metrics": {
+        "fusion_head": "baseline",
+        "classifier": "1536 -> 64 -> 1",
+        "roc_auc": 0.7132352941176471,
+        "pr_auc": 0.6220486111111112,
+        "threshold": 0.5,
+        "accuracy": 0.6,
+        "balanced_accuracy": 0.5404411764705883,
+        "sensitivity": 0.375,
+        "specificity": 0.7058823529411765,
+        "precision": 0.375,
+        "npv": 0.7058823529411765,
+        "f1": 0.375,
+        "mcc": 0.08088235294117647,
+        "tn": 12,
+        "fp": 5,
+        "fn": 5,
+        "tp": 3
+    },
+    "test_loaded": false,
+    "test_evaluated": false
+}

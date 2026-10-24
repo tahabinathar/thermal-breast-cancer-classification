@@ -1,0 +1,20 @@
+Experiment: EXP_01_DMR_Multiview_ResNet18
+Run: Run_01_A_Baseline
+Fusion head: baseline
+Classifier: 1536 -> 64 -> 1
+Total parameters: 11274945
+Trainable parameters: 98433
+Frozen parameters: 11176512
+Backbone: Shared frozen ImageNet-pretrained ResNet-18
+Views: Anterior, Left-oblique, Right-oblique
+Fusion: Feature concatenation
+Image size: 224 x 224
+Batch size: 16
+Maximum epochs: 100
+Learning rate: 0.001
+Dropout: 0.3
+Weight decay: 0.0
+Temperature minimum: 21.51000023
+Temperature maximum: 36.84000015
+Best epoch: 79
+Best validation ROC-AUC: 0.713235

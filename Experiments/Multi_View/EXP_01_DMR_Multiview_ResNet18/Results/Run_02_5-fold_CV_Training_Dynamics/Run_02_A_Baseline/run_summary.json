@@ -1,0 +1,306 @@
+{
+    "experiment_name": "EXP_01_DMR_Multiview_ResNet18",
+    "run_name": "Run_02_A_Baseline",
+    "fusion_head": "baseline",
+    "classifier": "1536 -> 64 -> 1",
+    "head_config": {
+        "run_name": "Run_02_A_Baseline",
+        "classifier_name": "1536 -> 64 -> 1",
+        "hidden_dim": 64,
+        "dropout": 0.3,
+        "weight_decay": 0.0
+    },
+    "development_splits": [
+        "Train",
+        "Validation"
+    ],
+    "n_development_patients": 165,
+    "n_healthy": 101,
+    "n_sick": 64,
+    "n_splits": 5,
+    "random_state": 10,
+    "epochs": 100,
+    "learning_rate": 0.001,
+    "batch_size": 16,
+    "image_size": 224,
+    "threshold": 0.5,
+    "optimizer": "Adam",
+    "backbone": "Frozen ImageNet-pretrained ResNet-18",
+    "fusion": "Concatenation of three 512-dimensional features",
+    "metrics_final_epoch_cv": {
+        "loss": {
+            "fold_values": [
+                0.6857860102459337,
+                0.5335676164338083,
+                0.7888375303962014,
+                0.6738202788613059,
+                0.5313907897833622
+            ],
+            "mean": 0.6426804451441223,
+            "std": 0.11009163153431206
+        },
+        "accuracy": {
+            "fold_values": [
+                0.7575757575757576,
+                0.7878787878787878,
+                0.7575757575757576,
+                0.7878787878787878,
+                0.7575757575757576
+            ],
+            "mean": 0.7696969696969698,
+            "std": 0.01659765325773229
+        },
+        "auc": {
+            "fold_values": [
+                0.8373015873015873,
+                0.8846153846153846,
+                0.9423076923076923,
+                0.8346153846153846,
+                0.8615384615384616
+            ],
+            "mean": 0.8720757020757022,
+            "std": 0.04419650430416732
+        },
+        "average_precision": {
+            "fold_values": [
+                0.7753224723619461,
+                0.8208137566437161,
+                0.9216830403065221,
+                0.8360422882091603,
+                0.7974123099123098
+            ],
+            "mean": 0.8302547734867309,
+            "std": 0.056075710472236945
+        },
+        "balanced_accuracy": {
+            "fold_values": [
+                0.7380952380952381,
+                0.7576923076923077,
+                0.6923076923076923,
+                0.7576923076923077,
+                0.7461538461538462
+            ],
+            "mean": 0.7383882783882785,
+            "std": 0.027060586761963042
+        },
+        "precision": {
+            "fold_values": [
+                0.6666666666666666,
+                0.8,
+                1.0,
+                0.8,
+                0.6923076923076923
+            ],
+            "mean": 0.7917948717948718,
+            "std": 0.13137616818658504
+        },
+        "recall": {
+            "fold_values": [
+                0.6666666666666666,
+                0.6153846153846154,
+                0.38461538461538464,
+                0.6153846153846154,
+                0.6923076923076923
+            ],
+            "mean": 0.5948717948717949,
+            "std": 0.1221654282007343
+        },
+        "specificity": {
+            "fold_values": [
+                0.8095238095238095,
+                0.9,
+                1.0,
+                0.9,
+                0.8
+            ],
+            "mean": 0.881904761904762,
+            "std": 0.0814689401466398
+        },
+        "f1": {
+            "fold_values": [
+                0.6666666666666666,
+                0.6956521739130435,
+                0.5555555555555556,
+                0.6956521739130435,
+                0.6923076923076923
+            ],
+            "mean": 0.6611668524712003,
+            "std": 0.060274830335733144
+        },
+        "mcc": {
+            "fold_values": [
+                0.47619047619047616,
+                0.5479667494733855,
+                0.5241424183609591,
+                0.5479667494733855,
+                0.49230769230769234
+            ],
+            "mean": 0.5177148171611797,
+            "std": 0.03256326826656039
+        }
+    },
+    "fold_summaries": [
+        {
+            "experiment_name": "EXP_01_DMR_Multiview_ResNet18",
+            "run_name": "Run_02_A_Baseline",
+            "fusion_head": "baseline",
+            "classifier": "1536 -> 64 -> 1",
+            "fold": 1,
+            "epochs_trained": 100,
+            "seed": 10,
+            "training_patients": 132,
+            "validation_patients": 33,
+            "temperature_min": 19.727609634399414,
+            "temperature_max": 36.84000015258789,
+            "threshold": 0.5,
+            "final_epoch_validation": {
+                "loss": 0.6857860102459337,
+                "accuracy": 0.7575757575757576,
+                "auc": 0.8373015873015873,
+                "average_precision": 0.7753224723619461,
+                "balanced_accuracy": 0.7380952380952381,
+                "precision": 0.6666666666666666,
+                "recall": 0.6666666666666666,
+                "specificity": 0.8095238095238095,
+                "f1": 0.6666666666666666,
+                "mcc": 0.47619047619047616,
+                "tn": 17,
+                "fp": 4,
+                "fn": 4,
+                "tp": 8
+            },
+            "test_loaded": false,
+            "test_evaluated": false
+        },
+        {
+            "experiment_name": "EXP_01_DMR_Multiview_ResNet18",
+            "run_name": "Run_02_A_Baseline",
+            "fusion_head": "baseline",
+            "classifier": "1536 -> 64 -> 1",
+            "fold": 2,
+            "epochs_trained": 100,
+            "seed": 10,
+            "training_patients": 132,
+            "validation_patients": 33,
+            "temperature_min": 21.270000457763672,
+            "temperature_max": 36.84000015258789,
+            "threshold": 0.5,
+            "final_epoch_validation": {
+                "loss": 0.5335676164338083,
+                "accuracy": 0.7878787878787878,
+                "auc": 0.8846153846153846,
+                "average_precision": 0.8208137566437161,
+                "balanced_accuracy": 0.7576923076923077,
+                "precision": 0.8,
+                "recall": 0.6153846153846154,
+                "specificity": 0.9,
+                "f1": 0.6956521739130435,
+                "mcc": 0.5479667494733855,
+                "tn": 18,
+                "fp": 2,
+                "fn": 5,
+                "tp": 8
+            },
+            "test_loaded": false,
+            "test_evaluated": false
+        },
+        {
+            "experiment_name": "EXP_01_DMR_Multiview_ResNet18",
+            "run_name": "Run_02_A_Baseline",
+            "fusion_head": "baseline",
+            "classifier": "1536 -> 64 -> 1",
+            "fold": 3,
+            "epochs_trained": 100,
+            "seed": 10,
+            "training_patients": 132,
+            "validation_patients": 33,
+            "temperature_min": 19.727609634399414,
+            "temperature_max": 36.84000015258789,
+            "threshold": 0.5,
+            "final_epoch_validation": {
+                "loss": 0.7888375303962014,
+                "accuracy": 0.7575757575757576,
+                "auc": 0.9423076923076923,
+                "average_precision": 0.9216830403065221,
+                "balanced_accuracy": 0.6923076923076923,
+                "precision": 1.0,
+                "recall": 0.38461538461538464,
+                "specificity": 1.0,
+                "f1": 0.5555555555555556,
+                "mcc": 0.5241424183609591,
+                "tn": 20,
+                "fp": 0,
+                "fn": 8,
+                "tp": 5
+            },
+            "test_loaded": false,
+            "test_evaluated": false
+        },
+        {
+            "experiment_name": "EXP_01_DMR_Multiview_ResNet18",
+            "run_name": "Run_02_A_Baseline",
+            "fusion_head": "baseline",
+            "classifier": "1536 -> 64 -> 1",
+            "fold": 4,
+            "epochs_trained": 100,
+            "seed": 10,
+            "training_patients": 132,
+            "validation_patients": 33,
+            "temperature_min": 19.727609634399414,
+            "temperature_max": 36.84000015258789,
+            "threshold": 0.5,
+            "final_epoch_validation": {
+                "loss": 0.6738202788613059,
+                "accuracy": 0.7878787878787878,
+                "auc": 0.8346153846153846,
+                "average_precision": 0.8360422882091603,
+                "balanced_accuracy": 0.7576923076923077,
+                "precision": 0.8,
+                "recall": 0.6153846153846154,
+                "specificity": 0.9,
+                "f1": 0.6956521739130435,
+                "mcc": 0.5479667494733855,
+                "tn": 18,
+                "fp": 2,
+                "fn": 5,
+                "tp": 8
+            },
+            "test_loaded": false,
+            "test_evaluated": false
+        },
+        {
+            "experiment_name": "EXP_01_DMR_Multiview_ResNet18",
+            "run_name": "Run_02_A_Baseline",
+            "fusion_head": "baseline",
+            "classifier": "1536 -> 64 -> 1",
+            "fold": 5,
+            "epochs_trained": 100,
+            "seed": 10,
+            "training_patients": 132,
+            "validation_patients": 33,
+            "temperature_min": 19.727609634399414,
+            "temperature_max": 36.812618255615234,
+            "threshold": 0.5,
+            "final_epoch_validation": {
+                "loss": 0.5313907897833622,
+                "accuracy": 0.7575757575757576,
+                "auc": 0.8615384615384616,
+                "average_precision": 0.7974123099123098,
+                "balanced_accuracy": 0.7461538461538462,
+                "precision": 0.6923076923076923,
+                "recall": 0.6923076923076923,
+                "specificity": 0.8,
+                "f1": 0.6923076923076923,
+                "mcc": 0.49230769230769234,
+                "tn": 16,
+                "fp": 4,
+                "fn": 4,
+                "tp": 9
+            },
+            "test_loaded": false,
+            "test_evaluated": false
+        }
+    ],
+    "test_loaded": false,
+    "test_evaluated": false
+}

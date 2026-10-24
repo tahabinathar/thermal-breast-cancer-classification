@@ -1,0 +1,34 @@
+{
+  "head": "small",
+  "candidate_epoch": 98,
+  "fold": 4,
+  "train_patient_count": 132,
+  "validation_patient_count": 33,
+  "temperature_range": {
+    "min": 19.727609634399414,
+    "max": 36.84000015258789
+  },
+  "class_weights": {
+    "Healthy": 0.8148148148148148,
+    "Sick": 1.2941176470588236
+  },
+  "threshold": 0.5,
+  "seed": 10,
+  "metrics": {
+    "roc_auc": 0.8615384615384616,
+    "average_precision": 0.8573773690078037,
+    "accuracy": 0.7878787878787878,
+    "balanced_accuracy": 0.7711538461538461,
+    "sensitivity": 0.6923076923076923,
+    "specificity": 0.85,
+    "precision": 0.75,
+    "f1": 0.72,
+    "mcc": 0.5508484963527321,
+    "tn": 17,
+    "fp": 3,
+    "fn": 4,
+    "tp": 9
+  },
+  "checkpoint": "Run_03_C_Small_Regularized\\checkpoints\\epoch_98\\Fold_04\\multiview_resnet18.pth",
+  "test_set_used": false
+}
