@@ -1,0 +1,12 @@
+{
+    "global_min": 19.727609634399414,
+    "global_max": 36.84000015258789,
+    "computed_from": "All 165 development patients (Train + Validation)",
+    "n_patients": 165,
+    "n_files": 495,
+    "views": [
+        "Anterior_ROI",
+        "Left_Oblique_ROI",
+        "Right_Oblique_ROI"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "experiment": "EXP_01_DMR_Multiview_ResNet18",
+    "run": "Run_05_OOF_Threshold_Selection",
+    "input_run": "Run_04_5-fold_CV_OOF_Predictions",
+    "fusion_head": "A - Baseline",
+    "fixed_epoch": 82,
+    "selection_method": "Constraint-based threshold selection from OOF predictions",
+    "constraints": {
+        "sensitivity": ">0.91",
+        "specificity": ">0.6"
+    },
+    "selection_criterion": "Highest sensitivity among thresholds satisfying both constraints",
+    "tie_breaker": "Highest specificity",
+    "final_tie_breaker": "Highest threshold",
+    "selected_threshold": 0.2041969746351242,
+    "sensitivity": 0.921875,
+    "specificity": 0.6534653465346535,
+    "accuracy": 0.7575757575757576,
+    "balanced_accuracy": 0.7876701732673268,
+    "precision": 0.6276595744680851,
+    "f1": 0.7468354430379747,
+    "tn": 66,
+    "fp": 35,
+    "fn": 5,
+    "tp": 59,
+    "number_of_oof_predictions": 165,
+    "overall_oof_roc_auc": 0.8638613861386139,
+    "overall_oof_pr_auc": 0.8017932600247467,
+    "test_set_used": false
+}

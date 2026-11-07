@@ -1,0 +1,18 @@
+{
+    "experiment": "EXP_01_DMR_Multiview_ResNet18",
+    "run": "Run_05_OOF_Threshold_Selection",
+    "input_run": "Run_04_5-fold_CV_OOF_Predictions",
+    "fusion_head": "A - Baseline",
+    "fixed_epoch": 82,
+    "number_of_oof_predictions": 165,
+    "healthy": 101,
+    "sick": 64,
+    "number_of_folds": 5,
+    "overall_oof_roc_auc": 0.8638613861386139,
+    "overall_oof_pr_auc": 0.8017932600247467,
+    "minimum_sensitivity": 0.91,
+    "minimum_specificity": 0.6,
+    "valid_thresholds": 6,
+    "selected_threshold": 0.2041969746351242,
+    "test_set_used": false
+}

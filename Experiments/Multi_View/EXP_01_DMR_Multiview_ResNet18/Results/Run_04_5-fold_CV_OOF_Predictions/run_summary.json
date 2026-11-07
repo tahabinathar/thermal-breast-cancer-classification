@@ -1,0 +1,174 @@
+{
+  "experiment": "EXP_01_DMR_Multiview_ResNet18",
+  "run": "Run_04_5-fold_CV_OOF_Predictions",
+  "fusion_head": "A_Baseline",
+  "fixed_epoch": 82,
+  "fixed_epoch_source": "Run_03_Fixed_Epoch_Selection",
+  "development_patients": 165,
+  "healthy_patients": 101,
+  "sick_patients": 64,
+  "views": [
+    "Anterior_ROI",
+    "Left_Oblique_ROI",
+    "Right_Oblique_ROI"
+  ],
+  "image_size": 224,
+  "batch_size": 16,
+  "n_folds": 5,
+  "seed": 10,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "dropout": 0.3,
+  "weight_decay": 0.0,
+  "backbone": "ResNet-18 ImageNet1K_V1",
+  "backbone_frozen": true,
+  "features_per_view": 512,
+  "fusion_features": 1536,
+  "classifier": "1536 -> 64 -> ReLU -> Dropout(0.3) -> 1",
+  "trainable_parameters": 98497,
+  "temperature_normalization": "Fold-specific training-only temperature range",
+  "mean_fold_roc_auc": 0.885921855921856,
+  "std_fold_roc_auc": 0.04299277939236904,
+  "mean_fold_average_precision": 0.8450111403353248,
+  "std_fold_average_precision": 0.06466522255479773,
+  "overall_oof_roc_auc": 0.8638613861386139,
+  "overall_oof_average_precision": 0.8017932600247467,
+  "oof_predictions": 165,
+  "threshold_applied": false,
+  "threshold_selection_performed": false,
+  "fold_manifest_source": "Run_02_A_Baseline/fold_results/Fold_XX/fold_patient_split.json",
+  "test_loaded": false,
+  "test_evaluated": false,
+  "fold_results": [
+    {
+      "fold": 1,
+      "fixed_epoch": 82,
+      "learning_rate": 0.001,
+      "dropout": 0.3,
+      "weight_decay": 0.0,
+      "trainable_parameters": 98433,
+      "train_patient_count": 132,
+      "validation_patient_count": 33,
+      "train_healthy": 80,
+      "train_sick": 52,
+      "validation_healthy": 21,
+      "validation_sick": 12,
+      "class_weights": {
+        "Healthy": 0.825,
+        "Sick": 1.2692307692307692
+      },
+      "temperature_range": {
+        "min": 19.727609634399414,
+        "max": 36.84000015258789
+      },
+      "roc_auc": 0.8373015873015873,
+      "average_precision": 0.7449056669451407,
+      "checkpoint": "checkpoints\\Fold_01\\multiview_resnet18.pth",
+      "test_set_used": false
+    },
+    {
+      "fold": 2,
+      "fixed_epoch": 82,
+      "learning_rate": 0.001,
+      "dropout": 0.3,
+      "weight_decay": 0.0,
+      "trainable_parameters": 98433,
+      "train_patient_count": 132,
+      "validation_patient_count": 33,
+      "train_healthy": 81,
+      "train_sick": 51,
+      "validation_healthy": 20,
+      "validation_sick": 13,
+      "class_weights": {
+        "Healthy": 0.8148148148148148,
+        "Sick": 1.2941176470588236
+      },
+      "temperature_range": {
+        "min": 21.270000457763672,
+        "max": 36.84000015258789
+      },
+      "roc_auc": 0.8807692307692307,
+      "average_precision": 0.8353412613027997,
+      "checkpoint": "checkpoints\\Fold_02\\multiview_resnet18.pth",
+      "test_set_used": false
+    },
+    {
+      "fold": 3,
+      "fixed_epoch": 82,
+      "learning_rate": 0.001,
+      "dropout": 0.3,
+      "weight_decay": 0.0,
+      "trainable_parameters": 98433,
+      "train_patient_count": 132,
+      "validation_patient_count": 33,
+      "train_healthy": 81,
+      "train_sick": 51,
+      "validation_healthy": 20,
+      "validation_sick": 13,
+      "class_weights": {
+        "Healthy": 0.8148148148148148,
+        "Sick": 1.2941176470588236
+      },
+      "temperature_range": {
+        "min": 19.727609634399414,
+        "max": 36.84000015258789
+      },
+      "roc_auc": 0.9615384615384616,
+      "average_precision": 0.9488161411238334,
+      "checkpoint": "checkpoints\\Fold_03\\multiview_resnet18.pth",
+      "test_set_used": false
+    },
+    {
+      "fold": 4,
+      "fixed_epoch": 82,
+      "learning_rate": 0.001,
+      "dropout": 0.3,
+      "weight_decay": 0.0,
+      "trainable_parameters": 98433,
+      "train_patient_count": 132,
+      "validation_patient_count": 33,
+      "train_healthy": 81,
+      "train_sick": 51,
+      "validation_healthy": 20,
+      "validation_sick": 13,
+      "class_weights": {
+        "Healthy": 0.8148148148148148,
+        "Sick": 1.2941176470588236
+      },
+      "temperature_range": {
+        "min": 19.727609634399414,
+        "max": 36.84000015258789
+      },
+      "roc_auc": 0.8538461538461538,
+      "average_precision": 0.847851507466892,
+      "checkpoint": "checkpoints\\Fold_04\\multiview_resnet18.pth",
+      "test_set_used": false
+    },
+    {
+      "fold": 5,
+      "fixed_epoch": 82,
+      "learning_rate": 0.001,
+      "dropout": 0.3,
+      "weight_decay": 0.0,
+      "trainable_parameters": 98433,
+      "train_patient_count": 132,
+      "validation_patient_count": 33,
+      "train_healthy": 81,
+      "train_sick": 51,
+      "validation_healthy": 20,
+      "validation_sick": 13,
+      "class_weights": {
+        "Healthy": 0.8148148148148148,
+        "Sick": 1.2941176470588236
+      },
+      "temperature_range": {
+        "min": 19.727609634399414,
+        "max": 36.812618255615234
+      },
+      "roc_auc": 0.8961538461538462,
+      "average_precision": 0.8481411248379576,
+      "checkpoint": "checkpoints\\Fold_05\\multiview_resnet18.pth",
+      "test_set_used": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "fold": 4,
+  "fixed_epoch": 82,
+  "learning_rate": 0.001,
+  "dropout": 0.3,
+  "weight_decay": 0.0,
+  "trainable_parameters": 98433,
+  "train_patient_count": 132,
+  "validation_patient_count": 33,
+  "train_healthy": 81,
+  "train_sick": 51,
+  "validation_healthy": 20,
+  "validation_sick": 13,
+  "class_weights": {
+    "Healthy": 0.8148148148148148,
+    "Sick": 1.2941176470588236
+  },
+  "temperature_range": {
+    "min": 19.727609634399414,
+    "max": 36.84000015258789
+  },
+  "roc_auc": 0.8538461538461538,
+  "average_precision": 0.847851507466892,
+  "checkpoint": "checkpoints\\Fold_04\\multiview_resnet18.pth",
+  "test_set_used": false
+}

@@ -1,0 +1,75 @@
+{
+    "experiment": "EXP_01_DMR_Multiview_ResNet18",
+    "run": "Run_06_Final_Training",
+    "seed": 10,
+    "device": "cuda",
+    "data_root": "D:\\HITEC\\STUDENT\\NEW PROJECT\\Breast_Thermography\\Dataset\\DMR_IR_Multi_View_ROI",
+    "development_splits": [
+        "Train",
+        "Validation"
+    ],
+    "development_patients": 165,
+    "healthy_patients": 101,
+    "sick_patients": 64,
+    "development_images": 495,
+    "test_used": false,
+    "image_size": 224,
+    "input_channels_per_view": 3,
+    "input_views": [
+        "Anterior_ROI",
+        "Left_Oblique_ROI",
+        "Right_Oblique_ROI"
+    ],
+    "batch_size": 16,
+    "epochs": 82,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "dropout_rate": 0.3,
+    "architecture": "ResNet18",
+    "pretrained_weights": "ImageNet1K_V1",
+    "backbone_frozen": true,
+    "shared_backbone": true,
+    "feature_dimension_per_view": 512,
+    "fusion_method": "concatenation",
+    "fusion_dimension": 1536,
+    "classifier": [
+        "Linear(1536,64)",
+        "ReLU",
+        "Dropout(0.3)",
+        "Linear(64,1)"
+    ],
+    "trainable_parameters": 98433,
+    "total_parameters": 11274945,
+    "augmentation": {
+        "random_rotation_degrees": 18,
+        "random_affine_scale": [
+            0.95,
+            1.05
+        ],
+        "horizontal_flip": false
+    },
+    "class_weighting": true,
+    "class_weights": {
+        "healthy": 0.8168316831683168,
+        "sick": 1.2890625
+    },
+    "loss": "BCEWithLogitsLoss",
+    "loss_reduction": "Per-sample weighted mean",
+    "early_stopping": false,
+    "checkpointing": false,
+    "deterministic": true,
+    "model_selection": false,
+    "fixed_epoch": 82,
+    "epoch_source": "Run_03_Fixed_Epoch_Selection",
+    "temperature_normalization": {
+        "method": "global_min_max",
+        "range_source": "development_data",
+        "global_min": 19.727609634399414,
+        "global_max": 36.84000015258789
+    },
+    "threshold": 0.2041969746351242,
+    "threshold_source": "Run_05_OOF_Threshold_Selection",
+    "threshold_selection_method": "Constraint-based OOF threshold selection",
+    "test_evaluation": false
+}
